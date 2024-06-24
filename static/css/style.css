@@ -41,18 +41,18 @@
 }
 
 /* 轮播图高 */
-.card-img, .card-img-bottom, .card-img-top {
+/* .card-img, .card-img-bottom, .card-img-top {
     height: 90vh;
 
-}
+} */
 
 .carousel-image {
-width: 100%;
-height: auto;
-max-height: 70vh;
-object-fit: cover;
-object-position: bottom;
-}
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    object-fit: cover; /* 保持图片比例 */
+    object-position: center; /* 图片居中显示 */
+  }
 
 .thumbnail-carousel img {
 width: 80px;
@@ -100,6 +100,10 @@ border: 2px solid #007bff;
 
 
 @media (max-width: 768px) {
+    .carousel-image {
+        max-height: 25vh;
+
+    }
 .card-img, .card-img-bottom, .card-img-top {
     height:25vh;
 }
