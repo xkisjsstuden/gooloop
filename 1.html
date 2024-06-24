@@ -1,77 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carousel Card Example</title>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <!-- Slick CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
-  <style>
-    .carousel .slick-slide {
-      margin: 0 10px;
-    }
-    .carousel .slick-prev, .carousel .slick-next {
-      background-color: rgba(0, 0, 0, 0.5);
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      z-index: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .carousel .slick-prev:before, .carousel .slick-next:before {
-      font-size: 20px;
-      color: white;
-    }
-    .carousel .slick-prev:hover, .carousel .slick-next:hover {
-      background-color: rgba(0, 0, 0, 0.8);
-    }
-    .card {
-      border: none;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>布局示例</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .content-left {
+            padding: 20px;
+        }
+        .content-right {
+            padding: 20px;
+        }
+        .content-image {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .content-image img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-
-<div class="container mt-5">
-  <div class="carousel">
-    <div class="card">
-      <img src="https://via.placeholder.com/300" class="card-img-top" alt="...">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 content-left">
+                <h2 style="font-weight: bold;" class="mb-3">Goodloop是谁</h2>
+                <div style="width: 9vw;height: .5vh;background: green;border-radius: 15%;"></div>
+               
+            </div>
+            <div class="col-md-6 content-right">
+                <div class="mt-5">
+                  <p>深圳钻臻网络技术有限公司的创立宗旨是一群来自储能行业，满怀梦想的年轻人。</p>
+                  <p>他们力于提供极致的服务把客户的梦想和企业在一起。</p>
+                  <p>公司致力于无所畏惧的想象，大数据、云计算驱动互联网的未来，为人们点亮生活，聚焦智慧城市、储能系统、绿色经济发展。</p>
+                  <p>这支铸造的人中，有来自华为和Arris等IT巨擘行业的专家。</p>
+                  <p>Chamberlain储能系统及行业的专业人士，以及不断在寻找高端行业的专业人才，他们有十年以上的行业工作经验，针对于储能及新能源行业的产品研发，致力于能为用户提供可信赖的技术，帮助打造一流的高效软件，跨越电子、通讯、汽车和互联网的先锋平台。</p>
+                </div>
+                <div class="content-image">
+                    <img src="path/to/your/image.png" alt="Image description">
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="card">
-      <img src="https://via.placeholder.com/300" class="card-img-top" alt="...">
-    </div>
-    <div class="card">
-      <img src="https://via.placeholder.com/300" class="card-img-top" alt="...">
-    </div>
-    <div class="card">
-      <img src="https://via.placeholder.com/300" class="card-img-top" alt="...">
-    </div>
-  </div>
-</div>
-
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<!-- Slick JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-<!-- Bootstrap JS -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script>
-  $(document).ready(function(){
-    $('.carousel').slick({
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      centerMode: true,
-      prevArrow: '<button type="button" class="slick-prev"><span class="slick-prev-icon"></span></button>',
-      nextArrow: '<button type="button" class="slick-next"><span class="slick-next-icon"></span></button>'
-    });
-  });
-</script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>
