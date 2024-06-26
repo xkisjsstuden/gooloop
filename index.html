@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Goodloop Website</title>
+    <link rel="icon" type="image/png" href="./static/img/wheel_icon.png">
     <link rel="stylesheet" href="static/css/style.css" >
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
@@ -108,7 +109,7 @@
 
     <!-- Certifications Section -->
 
-   
+
     <div class="container my-5">
         <h2 class="text-center mb-3">获得的专利与证书</h2>
         <div class="row">
@@ -117,21 +118,21 @@
                 <div id="carouselExampleIndicators" class="carousel slide mt-5" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="static/img/companyIntroduction.jpg" class="d-block w-100 rounded carousel-image" alt="Slide 1">
+                            <img src="static/img/companyIntroduction.jpg" class="d-block w-100 rounded img-fluid carousel-image" alt="Slide 1">
                             <div class="carousel-caption d-none d-md-block">
                                 <!-- <h5>大数据分析</h5>
                                 <p>运筹帷幄之中，帮助企业实现数字化转型。</p> -->
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="static/img/专利汇总.png" class="d-block w-100 rounded carousel-image" alt="Slide 2">
+                            <img src="static/img/专利汇总.png" class="d-block w-100 rounded img-fluid carousel-image" alt="Slide 2">
                             <div class="carousel-caption d-none d-md-block">
                                 <!-- <h5>统计分析</h5>
                                 <p>通过统计分析，为城市规划和商业活动提供决策支持。</p> -->
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="static/img/background.jpg" class="d-block w-100 rounded carousel-image" alt="Slide 3">
+                            <img src="static/img/background.jpg" class="d-block w-100 rounded img-fluid carousel-image" alt="Slide 3">
                             <div class="carousel-caption d-none d-md-block">
                                 <!-- <h5>智能解决方案</h5>
                                 <p>提供可靠的证据和建议，帮助企业更好地发展。</p> -->
@@ -149,13 +150,14 @@
                 </div>
     
                 <div class="thumbnail-carousel text-center mt-3">
-                    <img src="static/img/companyIntroduction.jpg" data-target="#carouselExampleIndicators" data-slide-to="0" class="active thumbnail-image" alt="Thumbnail 1">
-                    <img src="static/img/专利汇总.png" data-target="#carouselExampleIndicators" data-slide-to="1" class="thumbnail-image" alt="Thumbnail 2">
-                    <img src="static/img/background.jpg" data-target="#carouselExampleIndicators" data-slide-to="2" class="thumbnail-image" alt="Thumbnail 3">
+                    <img src="static/img/companyIntroduction.jpg" data-target="#carouselExampleIndicators" data-slide-to="0" class="active thumbnail-image carousel-image" alt="Thumbnail 1">
+                    <img src="static/img/专利汇总.png" data-target="#carouselExampleIndicators" data-slide-to="1" class="thumbnail-image carousel-image" alt="Thumbnail 2">
+                    <img src="static/img/background.jpg" data-target="#carouselExampleIndicators" data-slide-to="2" class="thumbnail-image carousel-image" alt="Thumbnail 3">
                 </div>
             </div>
         </div>
     </div>
+    
 
     <!-- Milestones Section -->
     <div class="container my-5">
@@ -307,32 +309,28 @@
 
     <!-- Partners Section -->
     <div class="container my-5">
-        <h2 class="text-center">我们的战略合作伙伴</h2>
+      
         <div class="row">
-            <div class="col-md-3">
-                <img src="partner1.png" class="img-fluid" alt="Partner 1">
-            </div>
-            <div class="col-md-3">
-                <img src="partner2.png" class="img-fluid" alt="Partner 2">
-            </div>
-            <div class="col-md-3">
-                <img src="partner3.png" class="img-fluid" alt="Partner 3">
-            </div>
-            <div class="col-md-3">
-                <img src="partner4.png" class="img-fluid" alt="Partner 4">
+            <h2 class="text-center col-md-12">我们的战略合作伙伴</h2>
+            <div class="col-md-12">
+                <img src="./static//img/合作伙伴.png" alt="" class="img-fluid">
             </div>
         </div>
     </div>
 
     <!-- Footer Section -->
     <footer class="bg-light text-center py-4">
-        <p>&copy; 2024 Goodloop. 版权所有. ICP备案号: 粤ICP备14002300号</p>
-        <div>
-            <a href="#"><img src="social1.png" alt="Social 1"></a>
-            <a href="#"><img src="social2.png" alt="Social 2"></a>
-            <a href="#"><img src="social3.png" alt="Social 3"></a>
+        <p>&copy; 2024 Goodloop. 版权所有. ICP备案号: 粤ICP备18147486号-1</p>
+        <div class="social-links d-flex justify-content-center align-items-center">
+            <a href="#"><img src="social1.png" class="social-icon" alt="Social 1"></a>
+            <span class="divider"></span>
+            <a href="https://weibo.com/u/5093472100" target="_blank" rel="noopener"><img src="./static/img/微博.png" class="social-icon" alt="Social 2">微博</a>
+            <span class="divider"></span>
+            <a href="./static/img/qrcode_for_gulu_wechat_small.jpg" target="_blank" rel="noopener"><img src="./static/img/微信.png" class="social-icon" alt="Social 3">微信公众号</a>
         </div>
     </footer>
+    
+    
 
 </body>
 <script>

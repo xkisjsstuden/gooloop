@@ -101,11 +101,11 @@ border: 2px solid #007bff;
 
 @media (max-width: 768px) {
     .carousel-image {
-        max-height: 25vh;
+        max-height: 42vh;
 
     }
-.card-img, .card-img-bottom, .card-img-top {
-    height:25vh;
+ .card-img-top {
+    height:35vh;
 }
 }
 
@@ -299,6 +299,7 @@ transform: rotate(0);
     .custom-img-size{
         margin-top: 7%;
     }
+
  }
 
 
@@ -309,4 +310,32 @@ body,html{
 
 .container{
     max-width: 100%;
+}
+
+
+/* 底部关于我们 */
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* 图片之间的间距 */
+}
+
+.social-icon {
+    width: 30px; /* 调整图片的宽度 */
+    height: 30px; /* 调整图片的高度 */
+    object-fit: cover; /* 保持图片比例 */
+    margin: 0 10px; /* 确保图片之间的间距 */
+}
+
+.divider {
+    width: 1px;
+    height: 30px; /* 与图片高度相同 */
+    background-color: #000; /* 分隔线颜色 */
+}
+@media (max-width: 768px) {
+    .social-icon {
+        width: 20px; /* 较小屏幕下调整图片的宽度 */
+        height: 20px; /* 较小屏幕下调整图片的高度 */
+    }
 }
