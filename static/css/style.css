@@ -339,3 +339,8 @@ body,html{
         height: 20px; /* 较小屏幕下调整图片的高度 */
     }
 }
+
+.timeline__item {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 500px;
+  }
