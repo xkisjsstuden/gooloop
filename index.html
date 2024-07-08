@@ -18,36 +18,44 @@
     <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- Header Section -->
-     <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"><img src="static/img/logo_text.png" class="img-fluid" alt="Goodloop Logo" width="150" height="1px"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active"><a class="nav-link" href="#">公司介绍</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">新闻中心</a></li>
-    
-                <!-- 产品与服务下拉菜单开始 -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        产品与服务
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">技术创新</a>
-                        <a class="dropdown-item" href="#">停车库类型</a>
-                        <a class="dropdown-item" href="#">服务提供</a>
-                        <a class="dropdown-item" href="#">停车库案例</a>
-                    </div>
-                </li>
-                <!-- 产品与服务下拉菜单结束 -->
-    
-                <li class="nav-item"><a class="nav-link" href="#">合作伙伴</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">联系我们</a></li>
-            </ul>
-        </div>
-    </nav>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="static/img/logo_text.png" alt="Goodloop Logo" width="150" height="auto">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#about">公司介绍</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#news">新闻中心</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                产品与服务
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#tech">技术创新</a>
+                                <a class="dropdown-item" href="#parking">停车库类型</a>
+                                <a class="dropdown-item" href="#services">服务提供</a>
+                                <a class="dropdown-item" href="#cases">停车库案例</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#partners">合作伙伴</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">联系我们</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
     <!-- Main Banner -->
@@ -81,28 +89,33 @@
 
 
      <!-- Introduction Section -->
-     <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-4 content-left">
-                <h2 style="font-weight: bold;" class="mb-3">Goodloop是谁</h2>
-                <div style="width: 9vw;height: .5vh;background: green;border-radius: 15%;"></div>
-               
-            </div>
-            <div class="col-md-8 content-right">
-                <div>
-                    <p>深圳轱辘网络技术有限公司的创立宗旨是一群来自储能行业，满怀梦想的年轻人。</p>
-                    <p>他们力于提供极致的服务把客户的梦想和企业在一起。</p>
-                    <p>公司致力于无所畏惧的想象，大数据、云计算驱动互联网的未来，为人们点亮生活，聚焦智慧城市、储能系统、绿色经济发展。</p>
-                    <p>这支铸造的人中，有来自华为和Arris等IT巨擘行业的专家。</p>
-                    <p>Chamberlain储能系统及行业的专业人士，以及不断在寻找高端行业的专业人才，他们有十年以上的行业工作经验，针对于储能及新能源行业的产品研发，致力于能为用户提供可信赖的技术，帮助<strong>打造一流的高效软件，跨越电子、通讯、汽车和互联网的先锋平台。</strong></p>
+     <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="mb-4">关于Goodloop</h2>
+                    <p class="lead">深圳轱辘网络技术有限公司致力于提供极致的智能停车解决方案。</p>
+                    <p>我们是一群来自储能行业，满怀梦想的年轻人。我们的团队包括来自华为和Arris等IT巨擘的专家，以及Chamberlain储能系统的行业专业人士。</p>
+                    <p>我们的使命是：</p>
+                    <ul>
+                        <li>提供可信赖的技术</li>
+                        <li>打造一流的高效软件</li>
+                        <li>跨越电子、通讯、汽车和互联网的先锋平台</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary mt-3">了解更多</a>
                 </div>
-                <div class="content-image mt-4">
-                    <img src="static/img/background.jpg" alt="Image description" class="img-fluid" style="border-radius: 1vw;">
+                <div class="col-lg-6">
+                    <div class="card shadow-sm">
+                        <img src="static/img/background.jpg" class="card-img-top" alt="Goodloop办公环境">
+                        <div class="card-body">
+                            <h5 class="card-title">我们的愿景</h5>
+                            <p class="card-text">无所畏惧的想象，用大数据、云计算驱动互联网的未来，为人们点亮生活，聚焦智慧城市、储能系统、绿色经济发展。</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
         </div>
-    </div>
+    </section>
 
     <div class="custom-divider mt-5"></div>
 
@@ -119,7 +132,7 @@
                 <div id="carouselExampleIndicators" class="carousel slide mt-5" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="static/img/companyIntroduction.jpg" class="d-block w-100 rounded img-fluid carousel-image" alt="Slide 1">
+                            <img src="static/img/证书.png" class="d-block w-100 rounded img-fluid carousel-image" alt="Slide 1">
                             <div class="carousel-caption d-none d-md-block">
                                 <!-- <h5>大数据分析</h5>
                                 <p>运筹帷幄之中，帮助企业实现数字化转型。</p> -->
@@ -151,9 +164,9 @@
                 </div>
     
                 <div class="thumbnail-carousel text-center mt-3">
-                    <img src="static/img/companyIntroduction.jpg" data-target="#carouselExampleIndicators" data-slide-to="0" class="active thumbnail-image carousel-image" alt="Thumbnail 1">
+                    <img src="static/img/证书.png" data-target="#carouselExampleIndicators" data-slide-to="0" class="active thumbnail-image carousel-image" alt="Thumbnail 1">
                     <img src="static/img/专利汇总.png" data-target="#carouselExampleIndicators" data-slide-to="1" class="thumbnail-image carousel-image" alt="Thumbnail 2">
-                    <img src="static/img/background.jpg" data-target="#carouselExampleIndicators" data-slide-to="2" class="thumbnail-image carousel-image" alt="Thumbnail 3">
+                    <img src="static/img/软著.png" data-target="#carouselExampleIndicators" data-slide-to="2" class="thumbnail-image carousel-image" alt="Thumbnail 3">
                 </div>
             </div>
         </div>
@@ -168,163 +181,296 @@
             </symbol>
         </svg>
         <h1>Goodloop的发展历程</h1>
-        <div id="timeline" class="timeline">
-            <div class="btn-group">
-                <button class="btn " type="button" data-action="expand">Expand All</button>
-                <button class="btn " type="button" data-action="collapse">Collapse All</button>
-            </div>
-            <div class="timeline__item">
-                <div class="timeline__item-header">
-                    <button class="timeline__arrow" type="button" id="item1" aria-labelledby="item1-name" aria-expanded="false" aria-controls="item1-ctrld" aria-haspopup="true" data-item="1">
-                        <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
-                            <use href="#arrow" />
-                        </svg>
-                    </button>
-                    <span class="timeline__dot"></span>
-                    <span id="item1-name" class="timeline__meta">
-                        <time class="timeline__date" datetime="1970-01-01">January 1, 2014</time><br>
-                        <strong class="timeline__title">Unix Epoch</strong>
-                    </span>
-                </div>
-                <div class="timeline__item-body" id="item1-ctrld" role="region" aria-labelledby="item1" aria-hidden="true">
-                    <div class="timeline__item-body-content">
-                        <p class="timeline__item-p">This is the day the Unix clock began (or <time datetime="1969-12-31">December 31, 1969</time> if you live behind UTC 😉).</p>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline__item">
-                <div class="timeline__item-header">
-                    <button class="timeline__arrow" type="button" id="item2" aria-labelledby="item2-name" aria-expanded="false" aria-controls="item2-ctrld" aria-haspopup="true" data-item="2">
-                        <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
-                            <use href="#arrow" />
-                        </svg>
-                    </button>
-                    <span class="timeline__dot"></span>
-                    <span id="item2-name" class="timeline__meta">
-                        <time class="timeline__date" datetime="1973-10-17">October 17, 1973</time><br>
-                        <strong class="timeline__title">Digits Within ISO 8601 Format</strong>
-                    </span>
-                </div>
-                <div class="timeline__item-body" id="item2-ctrld" role="region" aria-labelledby="item2" aria-hidden="true">
-                    <div class="timeline__item-body-content">
-                        <p class="timeline__item-p">At 6:36:57 PM UTC, the date in ISO 8601 format (1973-10-17) within the time digits (119731017) appeared for the first time.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline__item">
-                <div class="timeline__item-header">
-                    <button class="timeline__arrow" type="button" id="item3" aria-labelledby="item3-name" aria-expanded="false" aria-controls="item3-ctrld" aria-haspopup="true" data-item="3">
-                        <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
-                            <use href="#arrow" />
-                        </svg>
-                    </button>
-                    <span class="timeline__dot"></span>
-                    <span id="item3-name" class="timeline__meta">
-                        <time class="timeline__date" datetime="2001-09-09">September 9, 2001</time><br>
-                        <strong class="timeline__title">1 Billion Seconds</strong>
-                    </span>
-                </div>
-                <div class="timeline__item-body" id="item3-ctrld" role="region" aria-labelledby="item3" aria-hidden="true">
-                    <div class="timeline__item-body-content">
-                        <p class="timeline__item-p">Unix time reached 1,000,000,000 seconds at 1:46:40 AM UTC. The Danish UNIX User Group celebrated this in Copenhagen, Denmark.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline__item">
-                <div class="timeline__item-header">
-                    <button class="timeline__arrow" type="button" id="item4" aria-labelledby="item4-name" aria-expanded="false" aria-controls="item4-ctrld" aria-haspopup="true" data-item="4">
-                        <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
-                            <use href="#arrow" />
-                        </svg>
-                    </button>
-                    <span class="timeline__dot"></span>
-                    <span id="item4-name" class="timeline__meta">
-                        <time class="timeline__date" datetime="2009-02-13">February 13, 2009</time><br>
-                        <strong class="timeline__title">1,234,567,890 Seconds</strong>
-                    </span>
-                </div>
-                <div class="timeline__item-body" id="item4-ctrld" role="region" aria-labelledby="item4" aria-hidden="true">
-                    <div class="timeline__item-body-content">
-                        <p class="timeline__item-p">At 11:31:30 PM UTC, the digits of the time were 1234567890. This was celebrated worldwide, and even Google had a <a href="https://www.google.com/logos/unix1234567890.gif" target="_blank" rel="noopener">doodle</a> for it.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline__item">
-                <div class="timeline__item-header">
-                    <button class="timeline__arrow" type="button" id="item5" aria-labelledby="item5-name" aria-expanded="false" aria-controls="item5-ctrld" aria-haspopup="true" data-item="5">
-                        <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
-                            <use href="#arrow" />
-                        </svg>
-                    </button>
-                    <span class="timeline__dot"></span>
-                    <span id="item5-name" class="timeline__meta">
-                        <time class="timeline__date" datetime="2033-05-18">May 18, 2033</time><br>
-                        <strong class="timeline__title">2 Billion Seconds</strong>
-                    </span>
-                </div>
-                <div class="timeline__item-body" id="item5-ctrld" role="region" aria-labelledby="item5" aria-hidden="true">
-                    <div class="timeline__item-body-content">
-                        <p class="timeline__item-p">Unix time will reach 2,000,000,000 seconds at 3:33:20 AM UTC.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="timeline__item">
-                <div class="timeline__item-header">
-                    <button class="timeline__arrow" type="button" id="item6" aria-labelledby="item6-name" aria-expanded="false" aria-controls="item6-ctrld" aria-haspopup="true" data-item="6">
-                        <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
-                            <use href="#arrow" />
-                        </svg>
-                    </button>
-                    <span class="timeline__dot"></span>
-                    <span id="item6-name" class="timeline__meta">
-                        <time class="timeline__date" datetime="2038-01-19">January 19, 2038</time><br>
-                        <strong class="timeline__title">Unix Epochalypse</strong>
-                    </span>
-                </div>
-                <div class="timeline__item-body" id="item6-ctrld" role="region" aria-labelledby="item6" aria-hidden="true">
-                    <div class="timeline__item-body-content">
-                        <p class="timeline__item-p">Also known as the year 2038 problem, clocks running on a 32-bit signed integer will flip from 3:14:08 AM UTC on this day to 8:45:52 PM UTC on December 13, 1901. Therefore, values only from -2,147,483,648 to 2,147,483,647 for the second are supported.</p>
-                    </div>
-                </div>
+  <div id="timeline" class="timeline">
+    <div class="btn-group">
+        <button class="btn " type="button" data-action="expand">Expand All</button>
+        <button class="btn " type="button" data-action="collapse">Collapse All</button>
+    </div>
+    <div class="timeline__item">
+        <div class="timeline__item-header">
+            <button class="timeline__arrow" type="button" id="item1" aria-labelledby="item1-name" aria-expanded="false" aria-controls="item1-ctrld" aria-haspopup="true" data-item="1">
+                <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                    <use href="#arrow" />
+                </svg>
+            </button>
+            <span class="timeline__dot"></span>
+            <span id="item1-name" class="timeline__meta">
+                <time class="timeline__date" datetime="2014-01-01">January 1, 2014</time><br>
+                <strong class="timeline__title">轱辘网成立并发布停车APP</strong>
+            </span>
+        </div>
+        <div class="timeline__item-body" id="item1-ctrld" role="region" aria-labelledby="item1" aria-hidden="true">
+            <div class="timeline__item-body-content">
+                <p class="timeline__item-p">轱辘网正式成立，并推出了其首个停车APP，标志着公司进入智能停车领域的开端。</p>
             </div>
         </div>
+    </div>
+    <div class="timeline__item">
+        <div class="timeline__item-header">
+            <button class="timeline__arrow" type="button" id="item2" aria-labelledby="item2-name" aria-expanded="false" aria-controls="item2-ctrld" aria-haspopup="true" data-item="2">
+                <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                    <use href="#arrow" />
+                </svg>
+            </button>
+            <span class="timeline__dot"></span>
+            <span id="item2-name" class="timeline__meta">
+                <time class="timeline__date" datetime="2015-01-01">January 1, 2015</time><br>
+                <strong class="timeline__title">交警停车场上传系统</strong>
+            </span>
+        </div>
+        <div class="timeline__item-body" id="item2-ctrld" role="region" aria-labelledby="item2" aria-hidden="true">
+            <div class="timeline__item-body-content">
+                <p class="timeline__item-p">开发并实施了交警停车场上传系统，提高了停车管理的效率和准确性。</p>
+            </div>
+        </div>
+    </div>
+    <div class="timeline__item">
+        <div class="timeline__item-header">
+            <button class="timeline__arrow" type="button" id="item3" aria-labelledby="item3-name" aria-expanded="false" aria-controls="item3-ctrld" aria-haspopup="true" data-item="3">
+                <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                    <use href="#arrow" />
+                </svg>
+            </button>
+            <span class="timeline__dot"></span>
+            <span id="item3-name" class="timeline__meta">
+                <time class="timeline__date" datetime="2016-01-01">2016-2017</time><br>
+                <strong class="timeline__title">平面停车场业务</strong>
+            </span>
+        </div>
+        <div class="timeline__item-body" id="item3-ctrld" role="region" aria-labelledby="item3" aria-hidden="true">
+            <div class="timeline__item-body-content">
+                <p class="timeline__item-p">拓展业务范围，开始专注于平面停车场的管理和优化，为客户提供全面的停车解决方案。</p>
+            </div>
+        </div>
+    </div>
+    <div class="timeline__item">
+        <div class="timeline__item-header">
+            <button class="timeline__arrow" type="button" id="item4" aria-labelledby="item4-name" aria-expanded="false" aria-controls="item4-ctrld" aria-haspopup="true" data-item="4">
+                <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                    <use href="#arrow" />
+                </svg>
+            </button>
+            <span class="timeline__dot"></span>
+            <span id="item4-name" class="timeline__meta">
+                <time class="timeline__date" datetime="2018-01-01">January 1, 2018</time><br>
+                <strong class="timeline__title">立体停车库政策</strong>
+            </span>
+        </div>
+        <div class="timeline__item-body" id="item4-ctrld" role="region" aria-labelledby="item4" aria-hidden="true">
+            <div class="timeline__item-body-content">
+                <p class="timeline__item-p">响应城市发展需求，公司参与制定并实施了立体停车库相关政策，为未来的业务拓展奠定基础。</p>
+            </div>
+        </div>
+    </div>
+    <div class="timeline__item">
+        <div class="timeline__item-header">
+            <button class="timeline__arrow" type="button" id="item5" aria-labelledby="item5-name" aria-expanded="false" aria-controls="item5-ctrld" aria-haspopup="true" data-item="5">
+                <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                    <use href="#arrow" />
+                </svg>
+            </button>
+            <span class="timeline__dot"></span>
+            <span id="item5-name" class="timeline__meta">
+                <time class="timeline__date" datetime="2019-01-01">January 1, 2019</time><br>
+                <strong class="timeline__title">宝安固戍立体车库</strong>
+            </span>
+        </div>
+        <div class="timeline__item-body" id="item5-ctrld" role="region" aria-labelledby="item5" aria-hidden="true">
+            <div class="timeline__item-body-content">
+                <p class="timeline__item-p">在宝安区固戍地区成功建立并运营首个立体车库，标志着公司在立体停车领域的重要突破。</p>
+            </div>
+        </div>
+    </div>
+    <div class="timeline__item">
+        <div class="timeline__item-header">
+            <button class="timeline__arrow" type="button" id="item6" aria-labelledby="item6-name" aria-expanded="false" aria-controls="item6-ctrld" aria-haspopup="true" data-item="6">
+                <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                    <use href="#arrow" />
+                </svg>
+            </button>
+            <span class="timeline__dot"></span>
+            <span id="item6-name" class="timeline__meta">
+                <time class="timeline__date" datetime="2020-01-01">January 1, 2020</time><br>
+                <strong class="timeline__title">青创园/大浪项目</strong>
+            </span>
+        </div>
+        <div class="timeline__item-body" id="item6-ctrld" role="region" aria-labelledby="item6" aria-hidden="true">
+            <div class="timeline__item-body-content">
+                <p class="timeline__item-p">启动青创园和大浪项目，进一步扩大公司在创新园区和城市新区的停车管理业务。</p>
+            </div>
+        </div>
+    </div>
+    <div class="timeline__item">
+        <div class="timeline__item-header">
+            <button class="timeline__arrow" type="button" id="item7" aria-labelledby="item7-name" aria-expanded="false" aria-controls="item7-ctrld" aria-haspopup="true" data-item="7">
+                <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                    <use href="#arrow" />
+                </svg>
+            </button>
+            <span class="timeline__dot"></span>
+            <span id="item7-name" class="timeline__meta">
+                <time class="timeline__date" datetime="2021-01-01">January 1, 2021</time><br>
+                <strong class="timeline__title">与中集战略合作</strong>
+            </span>
+        </div>
+        <div class="timeline__item-body" id="item7-ctrld" role="region" aria-labelledby="item7" aria-hidden="true">
+            <div class="timeline__item-body-content">
+                <p class="timeline__item-p">与中集集团达成战略合作协议，强化了公司在停车设备制造和管理领域的竞争力。</p>
+            </div>
+        </div>
+    </div>
+    <div class="timeline__item">
+        <div class="timeline__item-header">
+            <button class="timeline__arrow" type="button" id="item8" aria-labelledby="item8-name" aria-expanded="false" aria-controls="item8-ctrld" aria-haspopup="true" data-item="8">
+                <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                    <use href="#arrow" />
+                </svg>
+            </button>
+            <span class="timeline__dot"></span>
+            <span id="item8-name" class="timeline__meta">
+                <time class="timeline__date" datetime="2022-01-01">January 1, 2022</time><br>
+                <strong class="timeline__title">中交车库专项组</strong>
+            </span>
+        </div>
+        <div class="timeline__item-body" id="item8-ctrld" role="region" aria-labelledby="item8" aria-hidden="true">
+            <div class="timeline__item-body-content">
+                <p class="timeline__item-p">成立中交车库专项工作组，集中资源推进大型交通枢纽的停车设施建设和管理。</p>
+            </div>
+        </div>
+    </div>
+    <div class="timeline__item">
+        <div class="timeline__item-header">
+            <button class="timeline__arrow" type="button" id="item9" aria-labelledby="item9-name" aria-expanded="false" aria-controls="item9-ctrld" aria-haspopup="true" data-item="9">
+                <svg class="timeline__arrow-icon" viewBox="0 0 24 24" width="24px" height="24px">
+                    <use href="#arrow" />
+                </svg>
+            </button>
+            <span class="timeline__dot"></span>
+            <span id="item9-name" class="timeline__meta">
+                <time class="timeline__date" datetime="2023-01-01">January 1, 2023</time><br>
+                <strong class="timeline__title">罗湖区全面推广及新区域拓展</strong>
+            </span>
+        </div>
+        <div class="timeline__item-body" id="item9-ctrld" role="region" aria-labelledby="item9" aria-hidden="true">
+            <div class="timeline__item-body-content">
+                <p class="timeline__item-p">在罗湖区实现全面推广，同时拓展业务至大鹏区和盐田区，进一步扩大公司的市场覆盖范围。</p>
+            </div>
+        </div>
+    </div>
+</div>
         
     </div>
 
     <!-- Achievements Section -->
-    <div class="container my-5">
-        <h2 class="text-center">成果展示</h2>
-        <div class="row mt-4">
-            <div class="col-md-4">
-                <img src="static/img/车厅效果图1.jpg" class=" custom-img-size" alt="Achievement 1">
+    <section id="achievements" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">我们的成果</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 achievement-card">
+                        <img src="static/img/车厅效果图1.jpg" class="card-img-top" alt="智能停车系统">
+                        <div class="card-body">
+                            <h5 class="card-title">智能停车系统</h5>
+                            <p class="card-text">实现了全自动化的停车管理，大幅提高了停车效率。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 achievement-card">
+                        <img src="static/img/沙井_20200915051332.jpg" class="card-img-top" alt="立体车库项目">
+                        <div class="card-body">
+                            <h5 class="card-title">立体车库项目</h5>
+                            <p class="card-text">创新的立体停车解决方案，有效解决了城市停车难题。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 achievement-card">
+                        <img src="static/img/浪口.jpg" class="card-img-top" alt="智慧城市项目">
+                        <div class="card-body">
+                            <h5 class="card-title">智慧城市项目</h5>
+                            <p class="card-text">将停车系统与城市管理相结合，打造智慧城市新典范。</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4">
-                <img src="static/img/沙井_20200915051332.jpg" class="custom-img-size" alt="Achievement 2">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 achievement-card">
+                        <img src="static/img/青创园1.jpg" class="card-img-top" alt="智能停车系统">
+                        <div class="card-body">
+                            <h5 class="card-title">全国最高AGV立体停车库
+                                </h5>
+                            <p class="card-text">深圳龙华青创园在建项目，占地2211平方米共22层，AGV搬运机器人式立
+                                体车库（投资1.61个亿，</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 achievement-card">
+                        <img src="static/img/梧桐山改造.png" class="card-img-top" alt="立体车库项目">
+                        <div class="card-body">
+                            <h5 class="card-title">梧桐山旧厂改造</h5>
+                            <ul class="project-details ml-3">
+                                <li>
+                                    <strong>园区占地面积：</strong>
+                                    <span>9000平方米</span>
+                                </li>
+                                <li>
+                                    <strong>立体车库车位：</strong>
+                                    <span>456个</span>
+                                </li>
+                                <li>
+                                    <strong>改造后的酒店和商业建筑面积：</strong>
+                                    <span>约5000平方米</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 achievement-card">
+                        <img src="static/img/玫瑰海岸.png" class="card-img-top" alt="智慧城市项目">
+                        <div class="card-body">
+                            <h5 class="card-title">玫瑰海岸智能立体车库</h5>
+                            <p class="card-text">占地面积1658平方米，地上16层，高46.4米，提供770个机械车位，为垂直升降类立体车库
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4">
-                <img src="static/img/浪口.jpg" class=" custom-img-size" alt="Achievement 3">
-            </div>
+            
+
         </div>
-    </div>
+    </section>
     
 
     <!-- Partners Section -->
-    <div class="container my-5">
-      
-        <div class="row">
-            <h2 class="text-center col-md-12">我们的战略合作伙伴</h2>
-            <div class="col-md-12">
-                <img src="./static//img/合作伙伴.png" alt="" class="img-fluid">
+    <section id="partners" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">我们的战略合作伙伴</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <div class="partners-showcase">
+                        <img src="./static/img/合作伙伴.png" alt="Goodloop的合作伙伴" class="img-fluid mb-4">
+                        <p class="lead">与行业领先企业携手，共创智能停车新未来</p>
+                    </div>
+                    <div class="mt-4">
+                        <p>我们与众多知名企业建立了战略合作关系，共同推动智能停车技术的创新与发展。</p>
+                        <p>通过强强联手，我们不断提升服务质量，为客户带来更优质的停车体验。</p>
+                    </div>
+                    <a href="./static/img/qrcode_for_gulu_wechat_small.jpg" class="btn btn-primary mt-4">了解合作机会</a>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
 </main>
     <!-- Footer Section -->
     <footer class="bg-light text-center py-4">
         <p>&copy; 2024 Goodloop. 版权所有. ICP备案号: 粤ICP备18147486号-1</p>
         <div class="social-links d-flex justify-content-center align-items-center">
-            <a href="#"><img src="social1.png" class="social-icon" alt="Social 1"></a>
+            <a href="#"><img src="./static/img/QQ邮箱.png" class="social-icon " alt="Social 1">1107878@qq.com</a>
             <span class="divider"></span>
             <a href="https://weibo.com/u/5093472100" target="_blank" rel="noopener"><img src="./static/img/微博.png" class="social-icon" alt="Social 2">微博</a>
             <span class="divider"></span>

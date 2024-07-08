@@ -1,4 +1,102 @@
 
+
+/* 头部nav样式 */
+/* 导航栏自定义样式 */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    transition: all 0.3s ease;
+}
+
+.navbar-brand img {
+    max-height: 40px;
+    width: auto;
+}
+
+.nav-link {
+    color: #333 !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: #007bff !important;
+}
+
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,.1);
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: #f8f9fa;
+    color: #007bff;
+}
+
+/* 为固定导航栏添加一些顶部内边距 */
+body {
+    padding-top: 70px;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        padding-top: 1rem;
+    }
+    .dropdown-menu {
+        border: none;
+        background-color: transparent;
+        box-shadow: none;
+    }
+}
+
+
+/* 公司介绍部分自定义样式 */
+#about {
+    background-color: #f8f9fa;
+}
+
+#about h2 {
+    color: #333;
+    font-weight: 700;
+    border-bottom: 3px solid green;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+#about .lead {
+    color: green;
+    font-weight: 500;
+}
+
+#about ul {
+    padding-left: 20px;
+}
+
+#about ul li {
+    margin-bottom: 10px;
+}
+
+#about .card {
+    transition: all 0.3s ease;
+}
+
+#about .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+#about .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: all 0.3s ease;
+}
+
+#about .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+
+
 .thumbnail-carousel img {
     width: 100px;
     height: 60px;
@@ -50,8 +148,10 @@
     width: 100%;
     height: auto;
     max-height: 70vh;
-    object-fit: cover; /* 保持图片比例 */
-    object-position: center; /* 图片居中显示 */
+    /* 保持图片比例 */
+    /* object-fit: cover;  */
+     /* 图片居中显示 */
+    /* object-position: center; */
   }
 
 .thumbnail-carousel img {
@@ -286,16 +386,16 @@ transform: rotate(0);
 
 
 /* 成果展示 */
-.custom-img-size {
+/* .custom-img-size {
     width: 100%;
-    height: 55vh; /* 你可以根据需要调整高度 */
-    object-fit: cover; /* 保持图片比例，并裁剪溢出部分 */
+    height: 55vh; 
+    object-fit: cover; 
     border-radius: 10px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); 
-}
+} */
 
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .custom-img-size{
         margin-top: 7%;
     }
@@ -310,6 +410,132 @@ body,html{
 
 .container{
     max-width: 100%;
+} */
+
+/* 成果展示部分自定义样式 */
+#achievements {
+    background-color: #f8f9fa;
+}
+
+#achievements h2 {
+    color: #333;
+    font-weight: 700;
+    position: relative;
+}
+
+#achievements h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #007bff;
+    margin: 20px auto 0;
+}
+
+.achievement-card {
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.achievement-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.achievement-card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.achievement-card .card-body {
+    background-color: #fff;
+}
+
+.achievement-card .card-title {
+    color: #007bff;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 10px 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* 合作伙伴 */
+
+/* 简化的合作伙伴展示部分样式 */
+#partners {
+    background-color: #f8f9fa;
+}
+
+#partners h2 {
+    color: #333;
+    font-weight: 700;
+    position: relative;
+}
+
+#partners h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #007bff;
+    margin: 20px auto 0;
+}
+
+.partners-showcase {
+    margin-bottom: 30px;
+}
+
+.partners-showcase img {
+    max-width: 100%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partners-showcase img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+#partners .lead {
+    color: #007bff;
+    font-weight: 500;
+}
+
+#partners p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 10px 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 
