@@ -68,23 +68,17 @@
         </div>
     </div> -->
     <main>
-    <!-- 轮播图 -->
+    <!-- 详情视频-->
     <div class="container mt-4">
-        <div class="intro-carousel"> 
-          <div class="card">
-            <img src="static/img/background.jpg" class="card-img-top" alt="...">
-          </div>
-          <div class="card">
-            <img src="static/img/background.jpg" class="card-img-top" alt="...">
-          </div>
-          <div class="card">
-            <img src="static/img/background.jpg" class="card-img-top" alt="...">
-          </div>
-
+        <div class="video_box">
+        <div class="video-container">
+            <video id="lazyVideo" class="card-img-top" muted loop preload="none" poster="static/img/video-poster.jpg">
+                <source src="./static/video/WeChat_20240708174346_compressed.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
     </div>
-    <div class="custom-divider mt-5"></div>
-</div>
+    </div>
 
 
 
@@ -483,6 +477,30 @@
 </body>
 <script>
 
+//视频懒加载
+document.addEventListener("DOMContentLoaded", function() {
+            var video = document.getElementById('lazyVideo');
+            console.log("Video element:", video);
+            
+            if ('IntersectionObserver' in window) {
+                let observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            console.log("Video is in view, loading video.");
+                            video.load();
+                            video.play();
+                            observer.unobserve(video);
+                        }
+                    });
+                });
+                observer.observe(video);
+            } else {
+                // Fallback if IntersectionObserver is not supported
+                console.log("IntersectionObserver not supported, loading video.");
+                video.load();
+                video.play();
+            }
+        });
 $(document).ready(function(){
   $('.intro-carousel').slick({
     infinite: true,
