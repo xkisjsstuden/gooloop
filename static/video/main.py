@@ -16,6 +16,6 @@ def compress_video(input_file, output_file, target_size_mb):
 
 input_file = r"C:\Users\26084\Desktop\gooloop\static\video\WeChat_20240708174346_compressed.mp4"
 output_file = "WeChat_20240708174346_compressed.mp4"
-target_size_mb = 10  # 目标大小为20MB
+target_size_mb = 5  # 目标大小为20MB
 
 compress_video(input_file, output_file, target_size_mb)
