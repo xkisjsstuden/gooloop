@@ -107,15 +107,25 @@ body {
 }
 
 
+/* 缩略图 */
 
 .thumbnail-carousel img {
-    width: 100px;
-    height: 60px;
+    width: 100%;  /* 改为百分比宽度 */
+    max-width: 100px;  /* 设置最大宽度 */
+    height: auto;  /* 高度自动调整,保持宽高比 */
     cursor: pointer;
     margin: 5px;
 }
+
 .thumbnail-carousel img.active {
     border: 2px solid #007bff;
+}
+
+@media screen and (max-width: 768px) {
+    .thumbnail-carousel img {
+        max-width: 80px;  /* 在小屏幕上减小最大宽度 */
+        margin: 3px;  /* 在小屏幕上减小边距 */
+    }
 }
 
 /* 公司顶部轮播图 */
@@ -129,6 +139,7 @@ body {
 
 #myCarousel>.carousel-inner .carousel-item img {
     max-height: 80vh; /* 设置您想要的最大高度 */
+    min-height: 50vh;
     width: auto; /* 让宽度自动调整 */
     max-width: 100%; /* 确保图片不会超出轮播图宽度 */
     height: auto; /* 保持图片比例 */
