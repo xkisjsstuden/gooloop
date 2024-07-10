@@ -118,32 +118,34 @@ body {
     border: 2px solid #007bff;
 }
 
-/* 公司顶部视频样式 */
+/* 公司顶部轮播图 */
 
-.video_box{
+#myCarousel {
+    max-width: 100%; /* 确保轮播图不超过其容器宽度 */
+    margin: 0 auto; /* 居中显示 */
+   
     
-        position: relative;
-        width: 100%;
-        padding-top: 56.25%; /* 16:9 比例 */
-        background-color: #000; /* 可选: 设置背景颜色 */
-
 }
 
-.video-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-}
-.video-container video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure video covers entire container */
+#myCarousel>.carousel-inner .carousel-item img {
+    max-height: 80vh; /* 设置您想要的最大高度 */
+    width: auto; /* 让宽度自动调整 */
+    max-width: 100%; /* 确保图片不会超出轮播图宽度 */
+    height: auto; /* 保持图片比例 */
+    object-fit: cover; /* 覆盖整个区域，可能会裁剪图片 */
+    margin: 0 auto; /* 图片居中 */
+    display: block; /* 确保边距生效 */
+    border-radius: 20px;
 }
 
 
+
+#myCarousel>.carousel-indicators li {
+    border: 2px solid white;
+}
+#myCarousel>.carousel-indicators .active {
+    background-color: white;
+}
 
 
 /* 分割线样式 */
