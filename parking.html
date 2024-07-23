@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>轱辘网络 - 停车库类型</title>
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" type="image/png" href="./static/img/wheel_icon.webp">
+
+        <style>
+            @import url('./static/css/style.css');
+            body {
+                font-family: Arial, sans-serif;
+                color: #333;
+                margin: 0;
+                padding: 0;
+            }
+            .container {
+                width: 100%;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            h1 {
+                text-align: center;
+                color: #2c3e50;
+                margin-top: 80px;
+            }
+            .parking-type {
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 40px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                border-radius: 8px;
+                overflow: hidden;
+            }
+            .parking-image {
+                flex: 1;
+                min-width: 300px;
+            }
+            .parking-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .parking-info {
+                flex: 1;
+                min-width: 300px;
+                padding: 20px;
+                background-color: #f8f9fa;
+            }
+            h2 {
+                color: #2980b9;
+                margin-top: 0;
+            }
+            @media (max-width: 768px) {
+                .parking-type {
+                    flex-direction: column;
+                }
+                .parking-image, .parking-info {
+                    width: 100%;
+                }
+            }
+            .navbar {
+                background-color: #ffffff;
+                box-shadow: 0 2px 4px rgba(0,0,0,.1);
+            }
+
+            .nav-link {
+                color: #333 !important;
+            }
+            .nav-link:hover, .nav-link:focus {
+                color: #007bff !important;
+            }
+            .dropdown-item:active {
+                background-color: #007bff;
+            }
+
+
+
+            h3 {
+                color: #3498db;
+                margin-bottom: 15px;
+                font-size: 1.3rem;
+            }
+
+
+            .application {
+                background-color: #e8f4f8;
+                padding: 20px;
+                border-radius: 8px;
+                margin-top: 25px;
+            }
+
+            .application>p{
+                color: #2980b9;
+            }
+
+
+
+        @media (max-width: 768px) {
+            .ppy-section .vehicle-types {
+                flex-direction: column;
+            }
+        }
+
+    
+   
+
+
+        </style>
+    </head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-1">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="static/img/logo_text_black.png" alt="Goodloop Logo" width="150" height="auto">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#about">公司介绍</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#news">新闻中心</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                产品与服务
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="index.html#tech">技术创新</a></li>
+                                <li><a class="dropdown-item" href="parking.html">停车库类型</a></li>
+                                <li><a class="dropdown-item" href="index.html#services">服务提供</a></li>
+                                <li><a class="dropdown-item" href="index.html#achievements">停车库案例</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="static/img/qrcode_for_gulu_wechat_small.webp">联系我们</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+          
+          <!-- WeChat QR Code Modal -->
+          <div class="modal fade" id="wechatModal" tabindex="-1" aria-labelledby="wechatModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="wechatModalLabel">微信二维码</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                  <img src="static/img/qrcode_for_gulu_wechat_small.webp" alt="WeChat QR Code" class="img-fluid">
+                </div>
+              </div>
+            </div>
+          </div>
+    </header>
+    <main>
+        <div class="container">
+            <h1>立体停车库类型</h1>
+            
+            <div class="parking-type">
+                <div class="parking-image">
+                    <img src="./static/img/ACG立体停车库.png" alt="AGV立体车库">
+                </div>
+                <div class="parking-info">
+                    <h2>AGV立体车库</h2>
+                    <p>AGV立体车库是一种全自动智能立体停车库。它采用AGV（自动导引车）技术，能够实现车辆的自动存取。这种停车库具有高效、节省空间的特点，非常适合城市中心等土地资源紧张的地区。</p>
+                    <ul>
+                        <li>采用AGV技术，实现全自动存取车</li>
+                        <li>高空间利用率，可大幅提升停车容量</li>
+                        <li>智能化管理，提高停车效率</li>
+                     
+                    </ul>
+                    <div class="application">
+                        <h3>适用范围</h3>
+                        <p>特别适用于商业中心、办公楼等高密度区域</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="parking-type">
+                <div class="parking-image">
+                    <img src="./static/img/PCX垂直升降式（塔库.png" alt="PCX垂直升降式立体车库" class="img-fluid">">
+                </div>
+                <div class="parking-info">
+                    <h2>PCX垂直升降式（塔库）</h2>
+                    <p>PCX垂直升降式立体车库，也称为塔库，是一种全自动智能化停车设备。它采用变频矢量技术和电梯控制技术，通过停车位与升降机的立体结合，实现车辆的存取。</p>
+                    <ul>
+                        <li>全自动智能化停车设备</li>
+                        <li>采用变频矢量和电梯控制技术</li>
+                        <li>适用于占地面积小、车辆存取集中的区域</li>
+                        <li>可满足地上/地下空间的高密度停车需求</li>
+                    </ul>
+                    <div class="application">
+                        <h3>适用范围</h3>
+                        <p>适用于占地面积小、车辆存取集中的中心商业区 域、银行、办公楼医院、车站、码头、企事业、 机关单位、居民小区等公共场所。
+                            可满足地上/地下空间的小面积、高密度、地块零 散的停车需求。
+                            </p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="parking-type">
+                <div class="parking-image">
+                    <img src="./static/img/PXD巷道堆垛式.png" alt="PXD巷道堆垛式立体车库" class="w-100">
+                </div>
+                <div class="parking-info">
+                    <h2>PXD巷道堆垛式</h2>
+                    <p>PXD巷道堆垛式是一种全自动停车设备，采用变频矢量控制系统。通过水平和垂直运动组合的巷道堆垛机，实现车辆的存取。</p>
+                    <ul>
+                        <li>适用于地上/地下、2层至7层多单元、多列的大、中、小型停车需求</li>
+                        <li>适合地面单层停车场改造、城区地下车库等场景</li>
+                        <li>可用于下部停放小货车、上部停放轿车的混合环境</li>
+                    </ul>
+                    <div class="application">
+                        <h3>适用范围</h3>
+                        <ul style="color: #2980b9;line-height: 3vh;" >
+                            <li>适用于地上/地下、2层至7层多单元、多组、多 列的大、 中、小型全智能、自动化车辆存取使用需求</li>
+                            <li>适用于地面单层停车场改造、城区地下车库、 地面绿化 区域及医院、银行、企事业机关单位。 </li>
+                            <li> 适用于下部停放小货车、上部停放轿车的各种 环境</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="parking-type ">
+                <div class="parking-image">
+                    <img src="./static/img/PPY平面移动式.png" alt="PPY平面移动式停车系统" class="img-fluid " >
+                </div>
+                <div class="parking-info">
+                    <h2>PPY平面移动式 (RGV/AGV)</h2>
+                    <p class="intro">PPY平面移动式停车系统是一种先进的立体停车解决方案，主要包括<span style="font-size: x-large;">RGV（Rail Guided Vehicle）</span>和<span style="font-size: x-large;">AGV（Automated Guided Vehicle）</span>两种类型。</p>
+                    <p>
+                        <strong>RGV：</strong>Rail Guided Vehicle，有轨道导航的搬运 车 RGV是有轨制导车辆，又叫有轨穿梭小车，与 AGV相比不同之处在于RGV在投入使用之前需要在 地面铺设轨道，类似火车、地铁一般，RGV小车在 轨道上来回行驶，轨道也为RGV提供了载重强、速 度快、成本低、稳定性高等诸多优点。
+                    </p>
+                    <p>
+                        <strong>AGV：</strong>Automated Guided Vehicle，自动搬运机器人采用激光雷达、机器视觉和其他各种传感器，自行导航。由于不依赖轨道 后期更改路线等就会非常便捷。 
+                    </p>
+                    
+                    <!-- <div class="vehicle-types">
+                        <div class="vehicle-type">
+                            <h3>RGV (Rail Guided Vehicle)</h3>
+                            <ul>
+                                <li>有轨道导航的搬运车，也称为有轨穿梭小车</li>
+                                <li>需要在地面铺设轨道，类似火车、地铁</li>
+                                <li>在轨道上来回行驶，提供承重强、速度快、成本低、稳定性高等优点</li>
+                            </ul>
+                        </div>
+                        <div class="vehicle-type">
+                            <h3>AGV (Automated Guided Vehicle)</h3>
+                            <ul>
+                                <li>自动搬运机器人，采用激光雷达、机器视觉和其他各种传感器进行自主导航</li>
+                                <li>不依赖轨道，后期更改路线更加灵活</li>
+                            </ul>
+                        </div>
+                    </div> -->
+                    
+                    <div class="application">
+                        <h3>适用范围</h3>
+                        <p>特别适用于医院、商场等停车需求量较大的场地，可以应对潮汐式的存取车需求，提供合理的存取车规划。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="bg-light mt-5 py-3">
+        <div class="container">
+            <p class="text-center mb-0">© 2024 Goodloop. 版权所有. ICP备案号: 粤ICP备18147486号-1</p>
+            <div class="d-flex justify-content-center align-items-center mt-2">
+                <a href="#" class="mx-2"><img src="./static/img/QQ邮箱.webp" alt="QQ邮箱" width="24" height="24"> 1107878@qq.com</a>
+                <a href="https://weibo.com/u/5093472100" target="_blank" rel="noopener" class="mx-2"><img src="./static/img/微博.webp" alt="微博" width="24" height="24"> 微博</a>
+                <a href="./static/img/qrcode_for_gulu_wechat_small.webp" target="_blank" rel="noopener" class="mx-2"><img src="./static/img/微信.webp" alt="微信" width="24" height="24"> 微信公众号</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

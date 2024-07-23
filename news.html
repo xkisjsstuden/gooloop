@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>轱辘网络 - 行业政策新闻</title>
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+            <link rel="icon" type="image/png" href="./static/img/wheel_icon.webp">
+
+        <style>
+            /* 导入首页的通用样式 */
+            @import url('static/css/style.css');
+    
+            /* 新闻中心页面特定样式 */
+            .news-header {
+                background-color: #f8f9fa;
+                padding: 2rem 0;
+                margin-bottom: 2rem;
+            }
+            .policy-card {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+            .policy-image {
+                height: 300px;
+                object-fit: cover;
+                width: 100%;
+            }
+            .policy-content {
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+            }
+            .policy-summary {
+                flex-grow: 1;
+            }
+            @media (max-width: 768px) {
+                .policy-image {
+                    height: 200px;
+                }
+            }
+    
+            /* 为固定导航栏添加一些顶部内边距 */
+            body {
+                padding-top: 65px;
+            }
+        </style>
+    </head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="static/img/logo_text_black.png" alt="Goodloop Logo" width="150" height="auto" >
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about">公司介绍</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#news">新闻中心</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            产品与服务
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="index.html#tech">技术创新</a></li>
+                            <li><a class="dropdown-item" href="parking.html">停车库类型</a></li>
+                            <li><a class="dropdown-item" href="index.html#services">服务提供</a></li>
+                            <li><a class="dropdown-item" href="index.html#achievements">停车库案例</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="static/img/qrcode_for_gulu_wechat_small.webp">联系我们</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="news-header">
+        <div class="container">
+            <h1 class="text-center">深圳市立体停车设施政策动态</h1>
+            <p class="text-center">了解深圳市关于立体停车设施的最新政策和发展方向</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="card policy-card">
+                    <img src="static/img/深圳市立体停车设施政策文件.png" alt="深圳市立体停车设施政策文件" class="card-img-top policy-image">
+                    <div class="card-body policy-content">
+                        <h2 class="card-title">深圳市立体停车设施政策文件</h2>
+                        <div class="policy-summary">
+                            <h5>政策要点：</h5>
+                            <ul>
+                                <li>深圳市发展改革委员会、财政委员会等多个部门联合发布政策</li>
+                                <li>涉及规划、国土资源、交通运输、住房建设等多个领域</li>
+                                <li>旨在加强停车设施建设，解决城市停车难题</li>
+                            </ul>
+                        </div>
+                        <a href="https://www.sz.gov.cn/zfgb/2019/gb1086/content/post_4998756.html" target="_blank" rel="noopener" class="btn btn-primary mt-auto" style="color: white;" >点击查看具体细节</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card policy-card">
+                    <div class="card-body policy-content">
+                        <h2 class="card-title">政策解读</h2>
+                        <div class="policy-summary">
+                            <p>深圳市政府高度重视停车难题，通过一系列政策支持立体停车设施的发展：</p>
+                            <ul>
+                                <li>简化审批流程，加快项目落地</li>
+                                <li>提供土地政策支持，增加建设用地供给</li>
+                                <li>鼓励社会资本参与，拓宽融资渠道</li>
+                                <li>允许增值服务，提高投资吸引力</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row g-4 mt-4">
+            <div class="col-lg-6">
+                <div class="card policy-card">
+                    <img src="static/img/龙华区机械式立体停车设施管理工作办公室文件.png" alt="龙华区机械式立体停车设施管理工作办公室文件" class="card-img-top policy-image">
+                    <div class="card-body policy-content">
+                        <h2 class="card-title">龙华区机械式立体停车设施管理工作办公室文件</h2>
+                        <div class="policy-summary">
+                            <h5>文件重点：</h5>
+                            <ul>
+                                <li>针对龙华区机械式立体停车设施管理的具体实施细则</li>
+                                <li>明确了管理职责和工作流程</li>
+                                <li>为区域内立体停车设施的规范化管理提供指导</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card policy-card">
+                    <div class="card-body policy-content">
+                        <h2 class="card-title">政策影响</h2>
+                        <div class="policy-summary">
+                            <p>这些政策的出台将对深圳市的停车行业产生深远影响：</p>
+                            <ul>
+                                <li>预计将大幅增加深圳市的停车位供给</li>
+                                <li>推动停车行业的智能化和现代化发展</li>
+                                <li>为城市土地的高效利用提供新思路</li>
+                                <li>创造新的就业机会和经济增长点</li>
+                            </ul>
+                            <p>轱辘网络作为行业领先企业，将积极响应政策号召，为深圳市的停车难题贡献智慧和力量。</p>
+                        </div>
+                        <a href="#" class="btn btn-secondary mt-auto">了解我们的解决方案</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-light mt-5 py-3">
+        <div class="container">
+            <p class="text-center mb-0">© 2024 Goodloop. 版权所有. ICP备案号: 粤ICP备18147486号-1</p>
+            <div class="d-flex justify-content-center align-items-center mt-2">
+                <a href="#" class="mx-2"><img src="./static/img/QQ邮箱.webp" alt="QQ邮箱" width="24" height="24"> 1107878@qq.com</a>
+                <a href="https://weibo.com/u/5093472100" target="_blank" rel="noopener" class="mx-2"><img src="./static/img/微博.webp" alt="微博" width="24" height="24"> 微博</a>
+                <a href="./static/img/qrcode_for_gulu_wechat_small.webp" target="_blank" rel="noopener" class="mx-2"><img src="./static/img/微信.webp" alt="微信" width="24" height="24"> 微信公众号</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
