@@ -8,6 +8,8 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
         @import url('./static/css/style.css');
@@ -22,6 +24,11 @@
             justify-content: center;
             margin-bottom: 1rem;
             transition: transform 0.3s ease-in-out;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
         }
         .service-icon i {
             font-size: 2rem;
@@ -55,43 +62,73 @@
             background-color: rgba(255, 255, 255, 0.95) !important;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 30px 0;
+        }
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: #2980b9;
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-1">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="static/img/logo_text_black.png" alt="Goodloop Logo" width="150" height="auto">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#about">公司介绍</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#news">新闻中心</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            产品与服务
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="index.html#tech">技术创新</a></li>
-                            <li><a class="dropdown-item" href="parking.html">停车库类型</a></li>
-                            <li><a class="dropdown-item" href="services.html">服务提供</a></li>
-                            <li><a class="dropdown-item" href="index.html#achievements">停车库案例</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#contactModal">联系我们</a>
-                    </li>
-                </ul>
+  
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-2">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="static/img/logo_text_black.png" alt="Goodloop Logo" width="150" height="auto">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#about">公司介绍</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="news.html">新闻中心</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                产品与服务
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="index.html#tech">技术创新</a></li>
+                                <li><a class="dropdown-item " href="parking.html">停车库类型</a></li>
+                                <li><a class="dropdown-item active" href="services.html">服务提供</a></li>
+                                <li><a class="dropdown-item" href="index.html#achievements">停车库案例</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#contactModal">联系我们</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="contactModalLabel">联系我们</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                  <img src="static/img/qrcode_for_gulu_wechat_small.webp" alt="微信二维码" class="img-fluid">
+                  <p class="mt-3">扫描二维码关注我们的微信公众号</p>
+                </div>
+              </div>
             </div>
         </div>
-    </nav>
+
 
     <header class="bg-dark text-white py-1">
         <div class="container text-center mb-5 pt-5">
@@ -195,26 +232,46 @@
         </div>
     </section>
 
-    <footer class="bg-light  py-3">
+    <footer class=" py-4">
         <div class="container">
-            <p class="text-center mb-0">© 2024 Goodloop. 版权所有. ICP备案号: 粤ICP备18147486号-1</p>
-            <div class="d-flex justify-content-center align-items-center mt-2">
-                <a href="#" class="mx-2"><img src="./static/img/QQ邮箱.webp" alt="QQ邮箱" width="24" height="24"> 1107878@qq.com</a>
-                <a href="https://weibo.com/u/5093472100" target="_blank" rel="noopener" class="mx-2"><img src="./static/img/微博.webp" alt="微博" width="24" height="24"> 微博</a>
-                <a href="./static/img/qrcode_for_gulu_wechat_small.webp" target="_blank" rel="noopener" class="mx-2"><img src="./static/img/微信.webp" alt="微信" width="24" height="24"> 微信公众号</a>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>关于轱辘网络</h4>
+                    <p>轱辘网络致力于提供智能化、高效率的停车解决方案，为城市交通贡献力量。</p>
+                </div>
+                <div class="col-md-3">
+                    <h4>快速链接</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html#about">公司介绍</a></li>
+                        <li><a href="news.html">新闻中心</a></li>
+                        <li><a href="index.html#tech">技术创新</a></li>
+                        <li><a href="services.html">服务提供</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4>联系我们</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:1107878@qq.com">1107878@qq.com</a></li>
+                        <li><i class="fab fa-weibo"></i> <a href="https://weibo.com/u/5093472100" target="_blank" rel="noopener">微博</a></li>
+                        <li><i class="fab fa-weixin"></i> <a href="#" data-bs-toggle="modal" data-bs-target="#wechatModal">微信公众号</a></li>
+                    </ul>
+                </div>
             </div>
+            <hr>
+            <p class="text-center mb-0">© 2024 Goodloop. 版权所有. ICP备案号: 粤ICP备18147486号-1</p>
         </div>
     </footer>
 
-    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <!-- WeChat QR Code Modal -->
+    <div class="modal fade" id="wechatModal" tabindex="-1" aria-labelledby="wechatModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="contactModalLabel">联系我们</h5>
+                    <h5 class="modal-title" id="wechatModalLabel">微信公众号</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body text-center">
-                    <img src="static/img/qrcode_for_gulu_wechat_small.webp" alt="微信二维码" class="img-fluid">
+                    <img src="./static/img/qrcode_for_gulu_wechat_small.webp" alt="WeChat QR Code" class="img-fluid">
                     <p class="mt-3">扫描二维码关注我们的微信公众号</p>
                 </div>
             </div>
