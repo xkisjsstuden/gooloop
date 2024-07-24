@@ -10,189 +10,258 @@
     <link rel="icon" type="image/png" href="./static/img/wheel_icon.webp">
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap');
-        a{
-            text-decoration: none;
-        }
-        body {
-            font-family: 'Noto Sans SC', Arial, sans-serif;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-        }
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 10px;
-        }
-        h1 {
-            text-align: center;
-            color: #2c3e50;
-            margin-top: 100px;
-            margin-bottom: 50px;
-            font-weight: 700;
-        }
-        .parking-type {
-            display: flex;
-            flex-wrap: wrap;
-            margin-bottom: 60px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            border-radius: 15px;
-            overflow: hidden;
-            background-color: #fff;
-            transition: all 0.3s ease;
-        }
-        .parking-type:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-        }
-        .parking-image {
-            flex: 1;
-            min-width: 300px;
-        }
-        .parking-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .parking-info {
-            flex: 1;
-            min-width: 300px;
-            padding: 30px;
-        }
-        h2 {
-            color: #2980b9;
-            margin-top: 0;
-            font-weight: 700;
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-        .navbar {
-            background-color: #ffffff;
-            box-shadow: 0 2px 4px rgba(0,0,0,.1);
-            padding-top: 0.5rem;
-            padding-bottom: 0.5rem;
-        }
-        .navbar-brand img {
-            height: 40px;
-            width: auto;
-        }
-        .nav-link {
-            color: #333 !important;
-            transition: color 0.3s ease;
-            padding-top: 0.5rem;
-            padding-bottom: 0.5rem;
-        }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap');
 
-        .nav-link:hover, .nav-link:focus {
-            color: #007bff !important;
-        }
-        .dropdown-item:active {
-            background-color: #007bff;
-        } 
-        h3 {
-            color: #3498db;
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-            font-weight: 700;
-        }
-        .application {
-            background-color: #e8f4f8;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 25px;
-        }
-        .application > p {
-            color: #2980b9;
-        }
-        .feature-list {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        .feature-list li {
-            margin-bottom: 10px;
-            position: relative;
-            padding-left: 30px;
-        }
-        .feature-list li:before {
-            content: "\f00c";
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            position: absolute;
-            left: 0;
-            color: #2ecc71;
-        }
-        .intro {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        footer {
-            background-color: #2c3e50;
-            color: #ecf0f1;
-            padding: 30px 0;
-        }
-        footer a {
-            color: #3498db;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        footer a:hover {
-            color: #2980b9;
-        }
-        .section-intro {
-            background-color: #e8f4f8;
-            padding: 30px;
-            border-radius: 15px;
-            margin-bottom: 50px;
-        }
-        .section-intro h2 {
-            color: #2c3e50;
-            margin-bottom: 20px;
-        }
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 30px;
-        }
-        .comparison-table th, .comparison-table td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-        .comparison-table th {
-            background-color: #f2f2f2;
-            font-weight: bold;
-        }
-        .comparison-table tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        .building-style {
-            margin-bottom: 40px;
-        }
-        .building-style h3 {
-            color: #2c3e50;
-            margin-bottom: 15px;
-        }
-        .building-style p {
-            margin-bottom: 20px;
-        }
-        @media (max-width: 768px) {
-            .parking-type {
-                flex-direction: column;
-            }
-            .parking-image, .parking-info {
-                width: 100%;
-            }
-            h1 {
-                margin-top: 80px;
-            }
-            .navbar-brand img {
-                height: 30px;
-            }
-        }
+/* General Styles */
+body {
+    font-family: 'Noto Sans SC', Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+a {
+    text-decoration: none;
+    color: #3498db;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* Typography */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin: 100px 0 50px;
+    font-weight: 700;
+}
+
+h2 {
+    color: #2980b9;
+    margin-top: 0;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #3498db;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.intro {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Navigation */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    padding: 0.5rem 0;
+}
+
+.navbar-brand img {
+    height: 40px;
+    width: auto;
+}
+
+.nav-link {
+    color: #333 !important;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: #007bff !important;
+}
+
+.dropdown-item:active {
+    background-color: #007bff;
+}
+
+/* Parking Type Section */
+.parking-type {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    padding: 30px;
+}
+
+.parking-type:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.parking-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.parking-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.parking-info {
+    flex: 1;
+    min-width: 300px;
+    padding: 30px;
+}
+
+.image-container {
+    height: 50vh;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Feature List */
+.feature-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.feature-list li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.feature-list li:before {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #2ecc71;
+}
+
+/* Cards */
+.card {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* Application Section */
+.application {
+    background-color: #e8f4f8;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 25px;
+}
+
+.application > p {
+    color: #2980b9;
+}
+
+/* Section Intro */
+.section-intro {
+    background-color: #e8f4f8;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 50px;
+}
+
+.section-intro h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Comparison Table */
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.comparison-table th, .comparison-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.comparison-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.comparison-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Building Style */
+.building-style {
+    margin-bottom: 40px;
+}
+
+.building-style h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.building-style p {
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 30px 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .parking-type {
+        flex-direction: column;
+    }
+    .parking-image, .parking-info {
+        width: 100%;
+    }
+    h1 {
+        margin-top: 80px;
+    }
+    .navbar-brand img {
+        height: 30px;
+    }
+    .image-container {
+        height: 200px;
+    }
+    .feature-list li {
+        padding-left: 25px;
+    }
+}
     </style>
 </head>
 <body>
@@ -264,40 +333,105 @@
                 </ul>
             </div>
 
-            <h2 class="mb-4">立体停车库类型对比</h2>
-            <div class="table-responsive">
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th>名称</th>
-                            <th>优点</th>
-                            <th>适用场景</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><a href="#agv-type">AGV立体车库</a></td>
-                            <td>全自动存取，智能化管理，用户体验佳</td>
-                            <td>城市中心商业区、大型办公楼、高端住宅小区</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#pcx-type">PCX垂直升降式（塔库）</a></td>
-                            <td>空间利用率高，适合狭小空间</td>
-                            <td>城市核心区域、寸土寸金的商业中心、紧凑型社区</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#pxd-type">PXD巷道堆垛式</a></td>
-                            <td>大容量存储，适合密集停车需求</td>
-                            <td>大型商场、机场、火车站、体育场馆周边</td>
-                        </tr>
-                        <tr>
-                            <td><a href="#ppy-type">PPY平面移动式 (RGV/AGV)</a></td>
-                            <td>灵活性高，可根据需求扩展</td>
-                            <td>中大型企业园区、医院、大学校园、大型社区</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <h2 class="mb-4">停车库类型对比</h2>
+<div class="table-responsive">
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>类型</th>
+                <th>优点</th>
+                <th>缺点</th>
+                <th>适用场景</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>传统停车库</td>
+                <td>
+                    <ul>
+                        <li>建设成本相对较低</li>
+                        <li>操作简单，使用者易于接受</li>
+                        <li>维护成本较低</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>空间利用率低</li>
+                        <li>需要大面积土地</li>
+                        <li>安全性相对较低</li>
+                        <li>车辆查找困难</li>
+                    </ul>
+                </td>
+                <td>郊区、土地资源丰富的地区、小型社区</td>
+            </tr>
+            <tr>
+                <td>机械式立体停车库</td>
+                <td>
+                    <ul>
+                        <li>空间利用率高</li>
+                        <li>安全性高</li>
+                        <li>智能化管理</li>
+                        <li>存取车便捷快速</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>初始投资较高</li>
+                        <li>需要专业维护</li>
+                        <li>对电力供应依赖性强</li>
+                    </ul>
+                </td>
+                <td>城市中心、商业区、高密度住宅区、写字楼</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h2 class="mb-4 mt-5">机械式立体停车库类型</h2>
+<div class="table-responsive">
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>名称</th>
+                <th>特点</th>
+                <th>适用场景</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="#ppy-type">AGV立体车库（含平面移动式RGV/AGV）</a></td>
+                <td>
+                    <ul>
+                        <li>全自动存取，智能化管理</li>
+                        <li>高度灵活，可根据需求扩展</li>
+                        <li>包括轨道式（RGV）和无轨式（AGV）</li>
+                    </ul>
+                </td>
+                <td>城市中心商业区、大型办公楼、高端住宅小区、医院、大学校园</td>
+            </tr>
+            <tr>
+                <td><a href="#pcx-type">PCX垂直升降式（塔库）</a></td>
+                <td>
+                    <ul>
+                        <li>空间利用率高，适合狭小空间</li>
+                        <li>采用变频矢量和电梯控制技术</li>
+                    </ul>
+                </td>
+                <td>城市核心区域、寸土寸金的商业中心、紧凑型社区</td>
+            </tr>
+            <tr>
+                <td><a href="#pxd-type">PXD巷道堆垛式</a></td>
+                <td>
+                    <ul>
+                        <li>大容量存储，适合密集停车需求</li>
+                        <li>多层多列设计，maximumise空间利用</li>
+                    </ul>
+                </td>
+                <td>大型商场、机场、火车站、体育场馆周边</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
             <div class="container">
                 <h2 class="text-center mb-5">智能立体车库的建筑风格</h2>
@@ -369,7 +503,7 @@
                 </div>
             </div>
             
-            <div class="parking-type" id="agv-type">
+            <!-- <div class="parking-type" id="agv-type">
                 <div class="parking-image">
                     <img src="./static/img/ACG立体停车库.png" alt="AGV立体车库">
                 </div>
@@ -384,6 +518,74 @@
                     <div class="application">
                         <h3><i class="fas fa-map-marker-alt"></i> 适用范围</h3>
                         <p>特别适用于商业中心、办公楼等高密度区域</p>
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="parking-type" id="ppy-type">
+                <h2>PPY平面移动式停车系统</h2>
+                <p class="intro">PPY平面移动式停车系统是一种先进的立体停车解决方案,包括AGV（Automated Guided Vehicle）和RGV（Rail Guided Vehicle）两种类型。这种系统高效灵活,空间利用率高,适用于多种现代化停车场景。</p>
+            
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="image-container">
+                            <img src="./static/img/ACG立体停车库.png" alt="AGV立体车库" class="img-fluid rounded">
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="image-container">
+                            <img src="./static/img/PPY平面移动式.png" alt="PPY平面移动式停车系统" class="img-fluid rounded">
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="parking-info mt-4">
+                    <ul class="feature-list row">
+                        <li class="col-md-6">全自动存取,智能化管理</li>
+                        <li class="col-md-6">高空间利用率,大幅提升停车容量</li>
+                        <li class="col-md-6">系统灵活,可根据需求扩展</li>
+                        <li class="col-md-6">适应性强,适用于复杂环境</li>
+                    </ul>
+            
+                    <div class="sub-types mt-4">
+                        <h3>两种类型比较：</h3>
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h4 class="card-title"><i class="fas fa-robot"></i> AGV (Automated Guided Vehicle)</h4>
+                                        <p class="card-text">无轨制导车辆,使用激光雷达、机器视觉等传感器自行导航。</p>
+                                        <h5>特点：</h5>
+                                        <ul>
+                                            <li>无需轨道,灵活性高</li>
+                                            <li>路线调整方便</li>
+                                            <li>适应复杂环境</li>
+                                            <li>初始投资高,扩展性好</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h4 class="card-title"><i class="fas fa-train"></i> RGV (Rail Guided Vehicle)</h4>
+                                        <p class="card-text">有轨制导车辆,需在地面铺设轨道,类似小型火车或地铁。</p>
+                                        <h5>特点：</h5>
+                                        <ul>
+                                            <li>载重能力强</li>
+                                            <li>运行速度快</li>
+                                            <li>成本相对较低</li>
+                                            <li>稳定性高</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="application mt-4">
+                        <h3><i class="fas fa-map-marker-alt"></i> 适用范围</h3>
+                        <p>PPY平面移动式停车系统适用于各种大型场所,如医院、商场、办公楼和高端住宅小区。AGV系统适合需要灵活性的场所,如多功能场馆；RGV系统适合需要大容量、高效率的场所,如机场和火车站。这种系统能有效应对各种停车需求,提供智能化的停车解决方案。</p>
                     </div>
                 </div>
             </div>
@@ -431,7 +633,7 @@
                 </div>
             </div>
 
-            <div class="parking-type" id="ppy-type">
+            <!-- <div class="parking-type" id="ppy-type">
                 <div class="parking-image">
                     <img src="./static/img/PPY平面移动式.png" alt="PPY平面移动式停车系统" class="img-fluid">
                 </div>
@@ -452,7 +654,8 @@
                         <p>特别适用于医院、商场等停车需求量较大的场地，可以应对潮汐式的存取车需求，提供合理的存取车规划。</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
+
 
             <div class="section-intro mt-5">
                 <h2>关于立体停车库</h2>
