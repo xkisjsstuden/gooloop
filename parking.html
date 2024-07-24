@@ -262,6 +262,70 @@ footer {
         padding-left: 25px;
     }
 }
+.mechanical-parking {
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    padding: 40px;
+    margin-bottom: 60px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.mechanical-parking h2 {
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.mechanical-parking p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #34495e;
+}
+
+.video-wrapper {
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.feature-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.feature-list li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.feature-list li:before {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #27ae60;
+}
+
+@media (max-width: 992px) {
+    .mechanical-parking {
+        padding: 30px;
+    }
+    
+    .video-wrapper {
+        margin-top: 20px;
+        max-width: 100%;
+    }
+}
     </style>
 </head>
 <body>
@@ -321,16 +385,28 @@ footer {
         <div class="container">
             <h1>立体停车库类型</h1>
 
-            <div class="section-intro">
+            <div class="section-intro mechanical-parking" id="mechanical-parking">
                 <h2>机械式立体停车库介绍</h2>
-                <p>立体停车库是用来最大量存取储放车辆的机械或机械设备系统，是提高停车场容量、提高土地利用效率、增加收益的有效工具。随着城市化进程的加速和汽车保有量的增加，立体停车库成为解决"停车难"问题的重要手段。</p>
-                <h3>立体停车库的优势</h3>
-                <ul class="feature-list">
-                    <li>空间利用率高，平均每辆车占地面积仅1平方米</li>
-                    <li>安全性高，实现人车分流</li>
-                    <li>充分利用有限的土地资源，可与其他建筑灵活搭配</li>
-                    <li>方便快捷，无需找车位或找车</li>
-                </ul>
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <p>立体停车库是用来最大量存取储放车辆的机械或机械设备系统，是提高停车场容量、提高土地利用效率、增加收益的有效工具。随着城市化进程的加速和汽车保有量的增加，立体停车库成为解决"停车难"问题的重要手段。</p>
+                        <h3>立体停车库的优势</h3>
+                        <ul class="feature-list">
+                            <li>空间利用率高，平均每辆车占地面积仅1平方米</li>
+                            <li>安全性高，实现人车分流</li>
+                            <li>充分利用有限的土地资源，可与其他建筑灵活搭配</li>
+                            <li>方便快捷，无需找车位或找车</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="video-wrapper">
+                            <video id="parkingVideo" controls preload="auto" muted playsinline autoplay>
+                                <source src="static/video/停车库介绍.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <h2 class="mb-4">停车库类型对比</h2>
@@ -346,12 +422,51 @@ footer {
         </thead>
         <tbody>
             <tr>
-                <td>传统停车库</td>
+                <td>
+                    智能停车库
+                    <br>
+                    <small>（包括机械式立体停车库、自动化平面移动停车库、垂直升降式停车库等）</small>
+                </td>
+                <td>
+                    <ul>
+                        <li>空间利用率高</li>
+                        <li>安全性高</li>
+                        <li>智能化管理</li>
+                        <li>存取车便捷快速（非高峰时段）</li>
+                        <li>减少车辆尾气排放</li>
+                        <li>可应用于狭小空间</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>初始投资较高</li>
+                        <li>需要专业维护</li>
+                        <li>对电力供应依赖性强</li>
+                        <li>高峰时段可能出现排队等待</li>
+                        <li>部分使用者可能需要适应期</li>
+                        <li>可能有车型限制</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>城市中心</li>
+                        <li>商业区</li>
+                        <li>高密度住宅区</li>
+                        <li>写字楼</li>
+                        <li>土地资源紧缺区域</li>
+                        <li>追求高效率的现代化项目</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>非智能停车库</td>
                 <td>
                     <ul>
                         <li>建设成本相对较低</li>
                         <li>操作简单，使用者易于接受</li>
                         <li>维护成本较低</li>
+                        <li>不依赖复杂的机械设备</li>
+                        <li>灵活性高，可根据需求调整布局</li>
                     </ul>
                 </td>
                 <td>
@@ -360,32 +475,23 @@ footer {
                         <li>需要大面积土地</li>
                         <li>安全性相对较低</li>
                         <li>车辆查找困难</li>
-                    </ul>
-                </td>
-                <td>郊区、土地资源丰富的地区、小型社区</td>
-            </tr>
-            <tr>
-                <td>机械式立体停车库</td>
-                <td>
-                    <ul>
-                        <li>空间利用率高</li>
-                        <li>安全性高</li>
-                        <li>智能化管理</li>
-                        <li>存取车便捷快速</li>
+                        <li>高峰时段可能出现拥堵</li>
                     </ul>
                 </td>
                 <td>
                     <ul>
-                        <li>初始投资较高</li>
-                        <li>需要专业维护</li>
-                        <li>对电力供应依赖性强</li>
+                        <li>郊区</li>
+                        <li>土地资源丰富的地区</li>
+                        <li>小型社区</li>
+                        <li>预算有限的项目</li>
+                        <li>需要灵活布局的场所</li>
                     </ul>
                 </td>
-                <td>城市中心、商业区、高密度住宅区、写字楼</td>
             </tr>
         </tbody>
     </table>
 </div>
+            
 
 <h2 class="mb-4 mt-5">机械式立体停车库类型</h2>
 <div class="table-responsive">
@@ -720,5 +826,53 @@ footer {
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    var video = document.getElementById('parkingVideo');
+    
+    // 当视频的元数据加载完成后
+    video.addEventListener('loadedmetadata', function() {
+        // 将视频时间设置到略微超过0秒的位置
+        video.currentTime = 0.1;
+    });
+    
+    // 当视频可以播放时（已经缓冲了足够的数据）
+    video.addEventListener('canplay', function() {
+        // 捕获当前帧作为缩略图
+        var canvas = document.createElement('canvas');
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+        
+        // 将捕获的帧设置为视频的封面
+        video.poster = canvas.toDataURL();
+        
+        // 将视频时间重置回0
+        video.currentTime = 0;
+        
+        // 尝试自动播放
+        var playPromise = video.play();
+
+        if (playPromise !== undefined) {
+            playPromise.then(_ => {
+                // 自动播放开始
+                console.log("Autoplay started");
+            })
+            .catch(error => {
+                // 自动播放被阻止
+                console.log("Autoplay prevented:", error);
+                // 这里可以添加一个播放按钮或其他用户交互元素
+            });
+        }
+    });
+
+    // 添加循环播放功能
+    video.addEventListener('ended', function() {
+        video.currentTime = 0;
+        video.play();
+    });
+});
+    </script>
 </body>
 </html>
