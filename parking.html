@@ -851,20 +851,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // 将视频时间重置回0
         video.currentTime = 0;
         
-        // 尝试自动播放
-        var playPromise = video.play();
 
-        if (playPromise !== undefined) {
-            playPromise.then(_ => {
-                // 自动播放开始
-                console.log("Autoplay started");
-            })
-            .catch(error => {
-                // 自动播放被阻止
-                console.log("Autoplay prevented:", error);
-                // 这里可以添加一个播放按钮或其他用户交互元素
-            });
-        }
     });
 
     // 添加循环播放功能
