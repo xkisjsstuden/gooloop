@@ -77,12 +77,28 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="static/img/qrcode_for_gulu_wechat_small.webp">联系我们</a>
+                        <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#contactModal">联系我们</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="contactModalLabel">联系我们</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="static/img/qrcode_for_gulu_wechat_small.webp" alt="微信二维码" class="img-fluid">
+              <p class="mt-3">扫描二维码关注我们的微信公众号</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
 
     <header class="news-header">
         <div class="container">

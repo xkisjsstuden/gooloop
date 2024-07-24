@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轱辘网 - 我们的核心业务</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        @import url('./static/css/style.css');
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background-color: #ffc107;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease-in-out;
+        }
+        .service-icon i {
+            font-size: 2rem;
+            color: white;
+        }
+        .service-card {
+            transition: all 0.3s ease-in-out;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
+        }
+        .bg-gradient {
+            background: linear-gradient(45deg, #1a237e, #4a148c);
+        }
+        .list-group-item {
+            transition: background-color 0.3s ease;
+        }
+        .list-group-item:hover {
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            transition: background-color 0.3s ease;
+        }
+        .navbar.scrolled {
+            background-color: rgba(255, 255, 255, 0.95) !important;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-1">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="static/img/logo_text_black.png" alt="Goodloop Logo" width="150" height="auto">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about">公司介绍</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#news">新闻中心</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            产品与服务
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="index.html#tech">技术创新</a></li>
+                            <li><a class="dropdown-item" href="parking.html">停车库类型</a></li>
+                            <li><a class="dropdown-item" href="index.html#services">服务提供</a></li>
+                            <li><a class="dropdown-item" href="index.html#achievements">停车库案例</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#contactModal">联系我们</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-dark text-white py-1">
+        <div class="container text-center mb-5 pt-5">
+            <h1 class="display-4 fw-bold">我们的核心业务</h1>
+            <p class="lead">为您提供全方位的智能停车解决方案</p>
+            <a href="#services" class="btn btn-light btn-lg mt-3">了解更多</a>
+        </div>
+    </header>
+
+    <section id="services" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4" data-aos="fade-right">
+                    <img src="static/img/核心业务.png" alt="立体停车库" class="img-fluid rounded shadow-lg">
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <h2 class="mb-4 fw-bold">5大核心业务</h2>
+                    <div class="row">
+                        <div class="col-md-6 mb-3" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="service-card card h-100">
+                                <div class="card-body text-center">
+                                    <div class="service-icon mx-auto">
+                                        <i class="bi bi-currency-yen"></i>
+                                    </div>
+                                    <h5 class="card-title">立体停车库投资与运营</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="service-card card h-100">
+                                <div class="card-body text-center">
+                                    <div class="service-icon mx-auto">
+                                        <i class="bi bi-building"></i>
+                                    </div>
+                                    <h5 class="card-title">立体车库代建</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="service-card card h-100">
+                                <div class="card-body text-center">
+                                    <div class="service-icon mx-auto">
+                                        <i class="bi bi-cloud"></i>
+                                    </div>
+                                    <h5 class="card-title">基于数字孪生系统的立体车库云平台</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="service-card card h-100">
+                                <div class="card-body text-center">
+                                    <div class="service-icon mx-auto">
+                                        <i class="bi bi-geo-alt"></i>
+                                    </div>
+                                    <h5 class="card-title">主动式停车导航系统</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">城市级静态交通云平台</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <ul class="list-group" data-aos="fade-up">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            立体车库管理系统
+                            <span class="badge bg-primary rounded-pill">1</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            平面停车场出入口管理系统
+                            <span class="badge bg-primary rounded-pill">2</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            路边停车
+                            <span class="badge bg-primary rounded-pill">3</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            充电服务
+                            <span class="badge bg-primary rounded-pill">4</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            增值商业平台
+                            <span class="badge bg-primary rounded-pill">5</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-dark text-white ">
+        <div class="container text-center">
+            <h2 class="mb-4">准备好开始您的智能停车解决方案了吗？</h2>
+            <a href="#" class="btn btn-light btn-lg" data-bs-toggle="modal" data-bs-target="#contactModal">联系我们</a>
+        </div>
+    </section>
+
+    <footer class="bg-light  py-3">
+        <div class="container">
+            <p class="text-center mb-0">© 2024 Goodloop. 版权所有. ICP备案号: 粤ICP备18147486号-1</p>
+            <div class="d-flex justify-content-center align-items-center mt-2">
+                <a href="#" class="mx-2"><img src="./static/img/QQ邮箱.webp" alt="QQ邮箱" width="24" height="24"> 1107878@qq.com</a>
+                <a href="https://weibo.com/u/5093472100" target="_blank" rel="noopener" class="mx-2"><img src="./static/img/微博.webp" alt="微博" width="24" height="24"> 微博</a>
+                <a href="./static/img/qrcode_for_gulu_wechat_small.webp" target="_blank" rel="noopener" class="mx-2"><img src="./static/img/微信.webp" alt="微信" width="24" height="24"> 微信公众号</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">联系我们</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="static/img/qrcode_for_gulu_wechat_small.webp" alt="微信二维码" class="img-fluid">
+                    <p class="mt-3">扫描二维码关注我们的微信公众号</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                document.querySelector('.navbar').classList.add('scrolled');
+            } else {
+                document.querySelector('.navbar').classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
