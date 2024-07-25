@@ -520,3 +520,12 @@ footer {
 .fully-centered{
     vertical-align: middle; /* 垂直居中 */
 }
+
+/* 建筑风格 */
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+.mt-auto {
+    margin-top: auto;
+}
