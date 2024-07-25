@@ -1,11 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap');
 
-li{
-    /* 取消默认的列表符号 */
+li {
     list-style: none;
-
 }
-
 
 /* General Styles */
 body {
@@ -18,12 +15,12 @@ body {
 
 a {
     text-decoration: none;
-    color: #3498db;
+    color: #8ab929;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #2980b9;
+    color: #edaf34;
 }
 
 .container {
@@ -36,13 +33,13 @@ a:hover {
 /* Typography */
 h1 {
     text-align: center;
-    color: #2c3e50;
+    color: #8ab929;
     margin: 100px 0 50px;
     font-weight: 700;
 }
 
 h2 {
-    color: #2980b9;
+    color: #edaf34;
     margin-top: 0;
     font-weight: 700;
     font-size: 2rem;
@@ -50,7 +47,7 @@ h2 {
 }
 
 h3 {
-    color: #3498db;
+    color: #8ab929;
     margin-bottom: 15px;
     font-size: 1.3rem;
     font-weight: 700;
@@ -81,11 +78,11 @@ h3 {
 }
 
 .nav-link:hover, .nav-link:focus {
-    color: #007bff !important;
+    color: #8ab929 !important;
 }
 
 .dropdown-item:active {
-    background-color: #007bff;
+    background-color: #8ab929;
 }
 
 /* Parking Type Section */
@@ -153,7 +150,7 @@ h3 {
     font-weight: 900;
     position: absolute;
     left: 0;
-    color: #2ecc71;
+    color: #8ab929;
 }
 
 /* Cards */
@@ -170,26 +167,26 @@ h3 {
 
 /* Application Section */
 .application {
-    background-color: #e8f4f8;
+    background-color: #f0f7e6;
     padding: 20px;
     border-radius: 8px;
     margin-top: 25px;
 }
 
 .application > p {
-    color: #2980b9;
+    color: #8ab929;
 }
 
 /* Section Intro */
 .section-intro {
-    background-color: #e8f4f8;
+    background-color: #fdf6e9;
     padding: 30px;
     border-radius: 15px;
     margin-bottom: 50px;
 }
 
 .section-intro h2 {
-    color: #2c3e50;
+    color: #edaf34;
     margin-bottom: 20px;
 }
 
@@ -198,6 +195,10 @@ h3 {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .comparison-table th, .comparison-table td {
@@ -209,6 +210,7 @@ h3 {
 .comparison-table th {
     background-color: #f2f2f2;
     font-weight: bold;
+    color: #8ab929;
 }
 
 .comparison-table tr:nth-child(even) {
@@ -221,7 +223,7 @@ h3 {
 }
 
 .building-style h3 {
-    color: #2c3e50;
+    color: #edaf34;
     margin-bottom: 15px;
 }
 
@@ -231,32 +233,23 @@ h3 {
 
 /* Footer */
 footer {
-    background-color: #2c3e50;
-    color: #ecf0f1;
+    background-color: #333;
+    color: #fff;
     padding: 30px 0;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    .parking-type {
-        flex-direction: column;
-    }
-    .parking-image, .parking-info {
-        width: 100%;
-    }
-    h1 {
-        margin-top: 80px;
-    }
-    .navbar-brand img {
-        height: 30px;
-    }
-    .image-container {
-        height: 200px;
-    }
-    .feature-list li {
-        padding-left: 25px;
-    }
+footer a {
+    color: #edaf34;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
+
+footer a:hover {
+    color: #8ab929;
+}
+
+
+/* Mechanical Parking */
 .mechanical-parking {
     background-color: #f8f9fa;
     border-radius: 15px;
@@ -266,7 +259,7 @@ footer {
 }
 
 .mechanical-parking h2 {
-    color: #2c3e50;
+    color: #edaf34;
     font-weight: 700;
     margin-bottom: 30px;
 }
@@ -291,26 +284,21 @@ footer {
     display: block;
 }
 
-.feature-list {
-    list-style-type: none;
-    padding-left: 0;
+/* Additional styles */
+.fully-centered {
+    vertical-align: middle;
 }
 
-.feature-list li {
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 30px;
+.card-body {
+    display: flex;
+    flex-direction: column;
 }
 
-.feature-list li:before {
-    content: "\f00c";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    position: absolute;
-    left: 0;
-    color: #27ae60;
+.mt-auto {
+    margin-top: auto;
 }
 
+/* Media Queries */
 @media (max-width: 992px) {
     .mechanical-parking {
         padding: 30px;
@@ -321,149 +309,37 @@ footer {
         max-width: 100%;
     }
 }
-.comparison-table {
-    border-collapse: separate;
-    border-spacing: 0;
-    width: 100%;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-}
-
-.comparison-table th,
-.comparison-table td {
-    padding: 15px;
-    text-align: left;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-.comparison-table th {
-    background-color: #f8f9fa;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-size: 0.9em;
-    color: #333;
-}
-
-.comparison-table tr:last-child td {
-    border-bottom: none;
-}
-
-.comparison-table tr:nth-child(even) {
-    background-color: #f8f9fa;
-}
-
-.comparison-table tr:hover {
-    background-color: #e8f4f8;
-    transition: background-color 0.3s ease;
-}
-
-.comparison-table td ul {
-    padding-left: 20px;
-    margin-bottom: 0;
-}
-
-.comparison-table td ul li {
-    margin-bottom: 5px;
-}
 
 @media (max-width: 768px) {
-    .comparison-table th,
-    .comparison-table td {
-        padding: 10px;
+    .parking-type {
+        flex-direction: column;
     }
-}
-
-/* 调整表格第一列(类型列)的样式 */
-.comparison-table th:first-child,
-.comparison-table td:first-child {
-    width: 20%; /* 调整宽度,可以根据需要调整百分比 */
-    background-color: #f0f8ff; /* 浅蓝色背景,使其突出 */
-    font-weight: bold;
-}
-
-/* 为类型列中的长文本添加样式 */
-.comparison-table td:first-child small {
-    display: block;
-    font-weight: normal;
-    color: #666;
-    margin-top: 5px;
-}
-
-/* 调整其他列的宽度 */
-.comparison-table th,
-.comparison-table td {
-    width: 26.66%; /* 剩余三列平均分配宽度 */
-}
-
-/* 确保表格内的列表更紧凑 */
-.comparison-table ul {
-    padding-left: 15px;
-    margin-bottom: 0;
-}
-
-.comparison-table ul li {
-    margin-bottom: 3px;
-    line-height: 1.4;
-}
-
-/* 响应式调整 */
-@media (max-width: 768px) {
-    .comparison-table th:first-child,
-    .comparison-table td:first-child {
-        width: auto;
+    .parking-image, .parking-info {
+        width: 100%;
     }
-    .comparison-table th,
-    .comparison-table td {
-        width: auto;
+    h1 {
+        margin-top: 80px;
     }
-}
-.comparison-table {
-    border-collapse: separate;
-    border-spacing: 0;
-    width: 100%;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-}
-
-.comparison-table th,
-.comparison-table td {
-    padding: 15px;
-    text-align: left;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-.comparison-table th {
-    background-color: #f8f9fa;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-size: 0.9em;
-    color: #333;
-}
-
-/* 添加响应式样式 */
-@media (max-width: 768px) {
+    .navbar-brand img {
+        height: 30px;
+    }
+    .image-container {
+        height: 200px;
+    }
+    .feature-list li {
+        padding-left: 25px;
+    }
     .comparison-table {
         border: none;
         box-shadow: none;
     }
-
     .comparison-table thead {
         display: none;
     }
-
     .comparison-table, .comparison-table tbody, .comparison-table tr, .comparison-table td {
         display: block;
         width: 100%;
     }
-
     .comparison-table tr {
         margin-bottom: 15px;
         border: 1px solid #e0e0e0;
@@ -471,13 +347,12 @@ footer {
         overflow: hidden;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-
     .comparison-table td {
         text-align: right;
         padding-left: 20%;
         position: relative;
+        word-break: break-word;
     }
-
     .comparison-table td:before {
         content: attr(data-label);
         position: absolute;
@@ -487,45 +362,18 @@ footer {
         white-space: nowrap;
         font-weight: bold;
         text-align: left;
+        color: #8ab929;
     }
-
     .comparison-table td:first-child {
-        background-color: #f0f8ff;
+        background-color: #f0f7e6;
         text-align: center;
         padding-left: 15px;
     }
-
     .comparison-table td:first-child:before {
         display: none;
     }
-
     .comparison-table ul {
         padding-left: 0;
         list-style-position: inside;
     }
-    
-}
-
-@media (max-width: 768px) {
-            .comparison-table td {
-                word-break: break-word;
-            }
-            
-        }
-
-
-
-/* 表格样式 */
-
-.fully-centered{
-    vertical-align: middle; /* 垂直居中 */
-}
-
-/* 建筑风格 */
-.card-body {
-    display: flex;
-    flex-direction: column;
-}
-.mt-auto {
-    margin-top: auto;
 }
