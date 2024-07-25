@@ -83,7 +83,7 @@
                     </div>
                     <div class="col-lg-5">
                         <div class="video-wrapper">
-                            <video id="parkingVideo" controls preload="auto" muted playsinline autoplay>
+                            <video id="parkingVideo" controls preload="metadata" muted playsinline autoplay >
                                 <source src="static/video/停车库介绍.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -510,34 +510,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-document.addEventListener('DOMContentLoaded', function() {
-    var video = document.getElementById('parkingVideo');
-    
-    // 当视频的元数据加载完成后
-    video.addEventListener('loadedmetadata', function() {
-        // 将视频时间设置到略微超过0秒的位置
-        video.currentTime = 0.1;
-    });
-    
-    // 当视频可以播放时（已经缓冲了足够的数据）
-    video.addEventListener('canplay', function() {
-        // 捕获当前帧作为缩略图
-        var canvas = document.createElement('canvas');
-        canvas.width = video.videoWidth;
-        canvas.height = video.videoHeight;
-        canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
-        
-        // 将捕获的帧设置为视频的封面
-        video.poster = canvas.toDataURL();
-        
-        // 将视频时间重置回0
-        video.currentTime = 0;
-        
 
-    });
-
-
-});
 
 let content=''
 content = content.replace(/、\s*$/, '');
