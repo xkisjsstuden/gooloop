@@ -326,6 +326,193 @@ footer {
         max-width: 100%;
     }
 }
+.comparison-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.comparison-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.comparison-table tr:last-child td {
+    border-bottom: none;
+}
+
+.comparison-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.comparison-table tr:hover {
+    background-color: #e8f4f8;
+    transition: background-color 0.3s ease;
+}
+
+.comparison-table td ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.comparison-table td ul li {
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .comparison-table th,
+    .comparison-table td {
+        padding: 10px;
+    }
+}
+
+/* 调整表格第一列(类型列)的样式 */
+.comparison-table th:first-child,
+.comparison-table td:first-child {
+    width: 20%; /* 调整宽度,可以根据需要调整百分比 */
+    background-color: #f0f8ff; /* 浅蓝色背景,使其突出 */
+    font-weight: bold;
+}
+
+/* 为类型列中的长文本添加样式 */
+.comparison-table td:first-child small {
+    display: block;
+    font-weight: normal;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* 调整其他列的宽度 */
+.comparison-table th,
+.comparison-table td {
+    width: 26.66%; /* 剩余三列平均分配宽度 */
+}
+
+/* 确保表格内的列表更紧凑 */
+.comparison-table ul {
+    padding-left: 15px;
+    margin-bottom: 0;
+}
+
+.comparison-table ul li {
+    margin-bottom: 3px;
+    line-height: 1.4;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .comparison-table th:first-child,
+    .comparison-table td:first-child {
+        width: auto;
+    }
+    .comparison-table th,
+    .comparison-table td {
+        width: auto;
+    }
+}
+.comparison-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.comparison-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+/* 添加响应式样式 */
+@media (max-width: 768px) {
+    .comparison-table {
+        border: none;
+        box-shadow: none;
+    }
+
+    .comparison-table thead {
+        display: none;
+    }
+
+    .comparison-table, .comparison-table tbody, .comparison-table tr, .comparison-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .comparison-table tr {
+        margin-bottom: 15px;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .comparison-table td {
+        text-align: right;
+        padding-left: 20%;
+        position: relative;
+    }
+
+    .comparison-table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 6px;
+        width: 18%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .comparison-table td:first-child {
+        background-color: #f0f8ff;
+        text-align: center;
+        padding-left: 15px;
+    }
+
+    .comparison-table td:first-child:before {
+        display: none;
+    }
+
+    .comparison-table ul {
+        padding-left: 0;
+        list-style-position: inside;
+    }
+}
+
+
+
+
     </style>
 </head>
 <body>
@@ -411,7 +598,7 @@ footer {
 
             <h2 class="mb-4">停车库类型对比</h2>
 <div class="table-responsive">
-    <table class="comparison-table">
+    <table class="comparison-table table table-hover">
         <thead>
             <tr>
                 <th>类型</th>
@@ -422,12 +609,12 @@ footer {
         </thead>
         <tbody>
             <tr>
-                <td>
+                <td data-label="类型">
                     智能停车库
                     <br>
                     <small>（包括机械式立体停车库、自动化平面移动停车库、垂直升降式停车库等）</small>
                 </td>
-                <td>
+                <td data-label="优点">
                     <ul>
                         <li>空间利用率高</li>
                         <li>安全性高</li>
@@ -437,7 +624,7 @@ footer {
                         <li>可应用于狭小空间</li>
                     </ul>
                 </td>
-                <td>
+                <td data-label="缺点">
                     <ul>
                         <li>初始投资较高</li>
                         <li>需要专业维护</li>
@@ -447,7 +634,7 @@ footer {
                         <li>可能有车型限制</li>
                     </ul>
                 </td>
-                <td>
+                <td data-label="适用场景">
                     <ul>
                         <li>城市中心</li>
                         <li>商业区</li>
@@ -459,8 +646,8 @@ footer {
                 </td>
             </tr>
             <tr>
-                <td>非智能停车库</td>
-                <td>
+                <td data-label="类型">非智能停车库</td>
+                <td data-label="优点">
                     <ul>
                         <li>建设成本相对较低</li>
                         <li>操作简单，使用者易于接受</li>
@@ -469,7 +656,7 @@ footer {
                         <li>灵活性高，可根据需求调整布局</li>
                     </ul>
                 </td>
-                <td>
+                <td data-label="缺点">
                     <ul>
                         <li>空间利用率低</li>
                         <li>需要大面积土地</li>
@@ -478,7 +665,7 @@ footer {
                         <li>高峰时段可能出现拥堵</li>
                     </ul>
                 </td>
-                <td>
+                <td data-label="适用场景">
                     <ul>
                         <li>郊区</li>
                         <li>土地资源丰富的地区</li>
@@ -495,7 +682,7 @@ footer {
 
 <h2 class="mb-4 mt-5">机械式立体停车库类型</h2>
 <div class="table-responsive">
-    <table class="comparison-table">
+    <table class="comparison-table table table-hover">
         <thead>
             <tr>
                 <th>名称</th>
@@ -505,35 +692,35 @@ footer {
         </thead>
         <tbody>
             <tr>
-                <td><a href="#ppy-type">AGV立体车库（含平面移动式RGV/AGV）</a></td>
-                <td>
+                <td data-label="名称"><a href="#ppy-type">AGV立体车库（含平面移动式RGV/AGV）</a></td>
+                <td data-label="特点">
                     <ul>
                         <li>全自动存取，智能化管理</li>
                         <li>高度灵活，可根据需求扩展</li>
                         <li>包括轨道式（RGV）和无轨式（AGV）</li>
                     </ul>
                 </td>
-                <td>城市中心商业区、大型办公楼、高端住宅小区、医院、大学校园</td>
+                <td data-label="适用场景">城市中心商业区、大型办公楼、高端住宅小区、医院、大学校园</td>
             </tr>
             <tr>
-                <td><a href="#pcx-type">PCX垂直升降式（塔库）</a></td>
-                <td>
+                <td data-label="名称"><a href="#pcx-type">PCX垂直升降式（塔库）</a></td>
+                <td data-label="特点">
                     <ul>
                         <li>空间利用率高，适合狭小空间</li>
                         <li>采用变频矢量和电梯控制技术</li>
                     </ul>
                 </td>
-                <td>城市核心区域、寸土寸金的商业中心、紧凑型社区</td>
+                <td data-label="适用场景">城市核心区域、寸土寸金的商业中心、紧凑型社区</td>
             </tr>
             <tr>
-                <td><a href="#pxd-type">PXD巷道堆垛式</a></td>
-                <td>
+                <td data-label="名称"><a href="#pxd-type">PXD巷道堆垛式</a></td>
+                <td data-label="特点">
                     <ul>
                         <li>大容量存储，适合密集停车需求</li>
                         <li>多层多列设计，最大程度空间利用</li>
                     </ul>
                 </td>
-                <td>大型商场、机场、火车站、体育场馆周边</td>
+                <td data-label="适用场景">大型商场、机场、火车站、体育场馆周边</td>
             </tr>
         </tbody>
     </table>
@@ -854,11 +1041,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     });
 
-    // 添加循环播放功能
-    video.addEventListener('ended', function() {
-        video.currentTime = 0;
-        video.play();
-    });
+
 });
     </script>
 </body>
