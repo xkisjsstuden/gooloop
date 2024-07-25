@@ -499,8 +499,23 @@
                         <p>我们与众多知名企业建立了战略合作关系，共同推动智能停车技术的创新与发展。</p>
                         <p>通过强强联手，我们不断提升服务质量，为客户带来更优质的停车体验。</p>
                     </div>
-                    <a href="./static/img/qrcode_for_gulu_wechat_small.webp" class="btn btn-primary mt-3">了解合作机会</a>
-                </div>
+                    <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#wechatModal">
+                        了解合作机会
+                    </button>   
+                    <div class="modal fade" id="wechatModal" tabindex="-1" aria-labelledby="wechatModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="wechatModalLabel">扫描二维码</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <img src="./static/img/qrcode_for_gulu_wechat_small.webp" alt="WeChat QR Code" class="img-fluid mb-3" style="max-width: 200px;">
+                                    <p class="text-muted">请使用微信扫描上方二维码了解更多合作机会</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>             
             </div>
         </div>
     </section>
