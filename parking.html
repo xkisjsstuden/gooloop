@@ -12,6 +12,13 @@
     <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap');
 
+li{
+    /* 取消默认的列表符号 */
+    list-style: none;
+
+}
+
+
 /* General Styles */
 body {
     font-family: 'Noto Sans SC', Arial, sans-serif;
@@ -510,6 +517,11 @@ footer {
     }
 }
 
+@media (max-width: 768px) {
+            .comparison-table td {
+                word-break: break-word;
+            }
+        }
 
 
 
@@ -1043,6 +1055,43 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 });
+
+function customLineBreak(element, separator) {
+            if (window.innerWidth <= 768) {
+                const content = element.innerHTML;
+                const parts = content.split(separator);
+                element.innerHTML = parts.join('<br>');
+            }
+        }
+
+        function applyCustomLineBreak() {
+            const cells = document.querySelectorAll('.comparison-table td');
+            cells.forEach(cell => {
+                if (!cell.querySelector('ul')) {  // 不处理包含 ul 的单元格
+                    customLineBreak(cell, '、');
+                }
+            });
+        }
+
+        function resetLineBreaks() {
+            const cells = document.querySelectorAll('.comparison-table td');
+            cells.forEach(cell => {
+                if (!cell.querySelector('ul')) {  // 不处理包含 ul 的单元格
+                    cell.innerHTML = cell.innerHTML.replace(/<br>/g, '、');
+                }
+            });
+        }
+
+        function handleResize() {
+            if (window.innerWidth <= 768) {
+                applyCustomLineBreak();
+            } else {
+                resetLineBreaks();
+            }
+        }
+
+        window.addEventListener('load', handleResize);
+        window.addEventListener('resize', handleResize);
     </script>
 </body>
 </html>
