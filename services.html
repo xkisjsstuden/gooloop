@@ -5,109 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>轱辘网 - 我们的核心业务</title>
     <link rel="icon" type="image/png" href="./static/img/wheel_icon.webp">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <style>
-        @import url('./static/css/style.css');
-        
-        .service-icon {
-            width: 80px;
-            height: 80px;
-            background-color: #ffc107;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1rem;
-            transition: transform 0.3s ease-in-out;
-        }
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .service-icon i {
-            font-size: 2rem;
-            color: white;
-        }
-        .service-card {
-            transition: all 0.3s ease-in-out;
-            border: none;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-        .service-card:hover .service-icon {
-            transform: scale(1.1);
-        }
-        .bg-gradient {
-            background: linear-gradient(45deg, #1a237e, #4a148c);
-        }
-        .list-group-item {
-            transition: background-color 0.3s ease;
-        }
-        .list-group-item:hover {
-            background-color: #f8f9fa;
-        }
-        .navbar {
-            transition: background-color 0.3s ease;
-        }
-        .navbar.scrolled {
-            background-color: rgba(255, 255, 255, 0.95) !important;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        footer {
-    background-color: #333;
-    color: #fff;
-    padding: 30px 0;
-}
-
-footer a {
-    color: #edaf34;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
-    color: #8ab929;
-}
-
-
-/* 服务列表样式 */
-.hover-shadow:hover {
-        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-        transform: translateY(-5px);
-    }
-    .transition {
-        transition: all 0.3s ease;
-    }
-    .card {
-        border: none;
-        border-radius: 15px;
-    }
-    .card-body {
-        padding: 2rem 1rem;
-    }
-    @media (max-width: 768px) {
-        .card-title {
-            font-size: 1.1rem;
-        }
-        .card-text {
-            font-size: 0.9rem;
-        }
-    }
-    </style>
+    <link rel="stylesheet" href="./static/css/services.css">
 </head>
 <body>
   
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-2">
-            <div class="container">
+            <div class="container" style="padding: 6px;">
                 <a class="navbar-brand" href="index.html">
                     <img src="static/img/logo_text_black.png" alt="Goodloop Logo" width="150" height="auto">
                 </a>
@@ -157,60 +64,66 @@ footer a:hover {
         </div>
 
 
-    <header class="bg-dark text-white py-1">
+    <header class="bg-dark text-white " style="padding-top: 5.5rem !important; padding-bottom: 4rem !important;">
         <div class="container text-center mb-5 pt-5">
             <h1 class="display-4 fw-bold">我们的核心业务</h1>
             <p class="lead">为您提供全方位的城市级静态交通和智能停车解决方案</p>
-            <a href="#services" class="btn btn-light btn-lg mt-3">了解更多</a>
         </div>
     </header>
 
+
     <section id="services" class="py-5">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row align-items-center">
-                <div class="col-md-6 mb-4" data-aos="fade-right">
-                    <img src="static/img/核心业务.png" alt="立体停车库" class="img-fluid rounded shadow-lg">
-                </div>
-                <div class="col-md-6" data-aos="fade-left">
-                    <h2 class="mb-4 fw-bold">5大核心业务</h2>
-                    <div class="row">
-                        <div class="col-md-6 mb-3" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="service-card card h-100">
-                                <div class="card-body text-center">
-                                    <div class="service-icon mx-auto">
-                                        <i class="bi bi-currency-yen"></i>
+                <div class="col-12" data-aos="fade-left">
+                    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4">
+                        <div class="col" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="service-card card h-100 shadow-sm">
+                                <div class="card-body text-center d-flex flex-column justify-content-center">
+                                    <div class="service-icon mx-auto mb-3">
+                                        <i class="bi bi-currency-yen fs-1"></i>
                                     </div>
                                     <h5 class="card-title">立体停车库投资与运营</h5>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 mb-3" data-aos="zoom-in" data-aos-delay="200">
-                            <div class="service-card card h-100">
-                                <div class="card-body text-center">
-                                    <div class="service-icon mx-auto">
-                                        <i class="bi bi-building"></i>
+                        <div class="col" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="service-card card h-100 shadow-sm">
+                                <div class="card-body text-center d-flex flex-column justify-content-center">
+                                    <div class="service-icon mx-auto mb-3">
+                                        <i class="bi bi-building fs-1"></i>
                                     </div>
                                     <h5 class="card-title">立体车库代建</h5>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 mb-3" data-aos="zoom-in" data-aos-delay="300">
-                            <div class="service-card card h-100">
-                                <div class="card-body text-center">
-                                    <div class="service-icon mx-auto">
-                                        <i class="bi bi-cloud"></i>
+                        <div class="col" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="service-card card h-100 shadow-sm">
+                                <div class="card-body text-center d-flex flex-column justify-content-center">
+                                    <div class="service-icon mx-auto mb-3">
+                                        <i class="fas fa-parking fs-1"></i>
                                     </div>
-                                    <h5 class="card-title">基于数字孪生系统的立体车库云平台</h5>
+                                    <h5 class="card-title">基于数字孪生的立体车库管理系统</h5>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 mb-3" data-aos="zoom-in" data-aos-delay="400">
-                            <div class="service-card card h-100">
-                                <div class="card-body text-center">
-                                    <div class="service-icon mx-auto">
-                                        <i class="bi bi-geo-alt"></i>
+                        <div class="col" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="service-card card h-100 shadow-sm">
+                                <div class="card-body text-center d-flex flex-column justify-content-center">
+                                    <div class="service-icon mx-auto mb-3">
+                                        <i class="bi bi-geo-alt fs-1"></i>
                                     </div>
                                     <h5 class="card-title">主动式停车导航系统</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col" data-aos="zoom-in" data-aos-delay="500">
+                            <div class="service-card card h-100 shadow-sm">
+                                <div class="card-body text-center d-flex flex-column justify-content-center">
+                                    <div class="service-icon mx-auto mb-3">
+                                        <i class="bi bi-cloud fs-1"></i>
+                                    </div>
+                                    <h5 class="card-title">城市级静态交通云平台</h5>
                                 </div>
                             </div>
                         </div>

@@ -27,8 +27,9 @@ a:hover {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 10px;
+    padding: 6px;
 }
+
 
 /* Typography */
 h1 {
@@ -61,25 +62,25 @@ h3 {
 
 /* Navigation */
 .navbar {
-    background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0,0,0,.1);
-    padding: 0.5rem 0;
+    transition: var(--transition);
 }
 
 .navbar-brand img {
-    height: 40px;
+    max-height: 35px;
     width: auto;
 }
 
 .nav-link {
-    color: #333 !important;
-    transition: color 0.3s ease;
-    padding: 0.5rem 0;
+    color: var(--text-dark) !important;
+    transition: var(--transition);
+    font-size: 1.2rem;
 }
 
 .nav-link:hover, .nav-link:focus {
     color: #8ab929 !important;
 }
+
 
 .dropdown-item:active {
     background-color: #8ab929;
