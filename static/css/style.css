@@ -64,8 +64,8 @@ body {
     text-align: center;
 }
 
+/* about部分的小字部分 */
 #about .subtitle {
-    color: #8ab929;
     font-size: 1.2rem;
     margin-bottom: 3.125rem;
     text-align: center;

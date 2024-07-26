@@ -1,149 +1,408 @@
-        @import url('./static/css/style.css');
-        
-        body {
-            font-family: 'Noto Sans SC', Arial, sans-serif;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-        }
-        .service-icon {
-            width: 80px;
-            height: 80px;
-            background-color: #ffc107;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1rem;
-            transition: transform 0.3s ease-in-out;
-        }
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .service-icon i {
-            font-size: 2rem;
-            color: white;
-        }
-        .service-card {
-            transition: all 0.3s ease-in-out;
-            border: none;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-        .service-card:hover .service-icon {
-            transform: scale(1.1);
-        }
-        .bg-gradient {
-            background: linear-gradient(45deg, #1a237e, #4a148c);
-        }
-        .list-group-item {
-            transition: background-color 0.3s ease;
-        }
-        .list-group-item:hover {
-            background-color: #f8f9fa;
-        }
-        .navbar {
-            box-shadow: 0 2px 4px rgba(0,0,0,.1);
-            transition: var(--transition);
-        }
-        
-        .navbar-brand img {
-            max-height: 35px;
-            width: auto;
-        }
-        
-        .nav-link {
-            color: var(--text-dark) !important;
-            font-weight: 500;
-            transition: var(--transition);
-            font-size: 1.2rem;
-        }
-        
-        .nav-link:hover, .nav-link:focus {
-            color: #8ab929!important;
-        }
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        footer {
+@import url('./static/css/style.css');
+
+body {
+    font-family: 'Noto Sans SC', Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #8ab929;
+}
+
+.container {
+    width: 100%;
+    max-width: 90vw;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* 导航栏样式 */
+.navbar {
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,.075);
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-brand img {
+    max-height: 2.5rem;
+    width: auto;
+}
+
+.nav-link {
+    color: #333 !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: #8ab929 !important;
+}
+
+/* 头部样式 */
+.display-4 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.lead {
+    font-size: 1.25rem;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/* 服务卡片样式 */
+.service-card {
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.1);
+    background-color: #ffffff;
+}
+
+.service-card:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+}
+
+.service-icon {
+    width: 5rem;
+    height: 5rem;
+    background-color: #ffc107;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem auto;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+}
+
+.service-icon i {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #1a237e;
+}
+
+/* 服务详情样式 - 优化版 */
+.service-detail {
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.service-detail h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #1a237e;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.service-detail h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: #ffc107;
+}
+
+.service-detail p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service-detail ul {
+    padding-left: 2rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service-detail li {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.service-detail li::before {
+    content: '•';
+    color: #ffc107;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.service-image-container {
+    width: 100%;
+    max-width: 800px;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 宽高比 */
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.1);
+    margin: 2rem auto;
+}
+
+.service-image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.service-image-container:hover img {
+    transform: scale(1.05);
+}
+
+/* 子服务卡片样式 */
+.sub-service-card {
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.sub-service-card:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+}
+
+.icon-wrapper {
+    width: 4rem;
+    height: 4rem;
+    background-color: #ffc107;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.icon-wrapper i {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.sub-service-card h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #1a237e;
+}
+
+.sub-service-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* 页脚样式 */
+footer {
     background-color: #333;
     color: #fff;
-    padding: 30px 0;
+    padding: 3rem 0;
+}
+
+footer h4 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #ffc107;
 }
 
 footer a {
-    color: #edaf34;
+    color: #fff;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 footer a:hover {
     color: #8ab929;
 }
 
+footer ul {
+    padding-left: 0;
+    list-style-type: none;
+}
 
-/* 服务列表样式 */
-.hover-shadow:hover {
-        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-        transform: translateY(-5px);
-    }
-    .transition {
-        transition: all 0.3s ease;
-    }
-    .card {
-        border: none;
-        border-radius: 15px;
-    }
-    .card-body {
-        padding: 2rem 1rem;
-    }
-    @media (max-width: 768px) {
-        .card-title {
-            font-size: 1.1rem;
-        }
-        .card-text {
-            font-size: 0.9rem;
-        }
-    }
+footer li {
+    margin-bottom: 0.5rem;
+}
 
-    @media (max-width: 767.98px) {
-    .service-card {
-        margin-bottom: 1rem;
-    }
-    .service-icon {
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .display-4 {
         font-size: 2rem;
-        margin-bottom: 0.5rem;
     }
+
+    .lead {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    .service-icon {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .service-icon i {
+        font-size: 1.5rem;
+    }
+
     .card-title {
+        font-size: 1rem;
+    }
+
+    .service-detail {
+        padding: 3rem 1.5rem;
+    }
+
+    .service-detail h2 {
+        font-size: 2rem;
+    }
+
+    .service-detail p, .service-detail li {
         font-size: 1rem;
     }
 }
 
-.service-card {
-    transition: transform 0.3s ease-in-out;
+@media (max-width: 576px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .service-card {
+        margin-bottom: 1rem;
+    }
+
+    .bg-dark {
+        padding: 2rem 0;
+    }
+
+    .service-detail {
+        padding: 2rem 1rem;
+    }
 }
 
-.service-card:hover {
-    transform: translateY(-5px);
+/* 动画效果 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.service-icon {
-
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1rem;
+.fade-in-up {
+    animation: fadeInUp 0.5s ease-out;
 }
 
-.card-body {
-    min-height: 200px;
+/* 新增：内容强调样式 */
+.highlight {
+    background-color: #fff3cd;
+    padding: 1.5rem;
+    border-left: 4px solid #ffc107;
+    margin-bottom: 2rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.highlight h3 {
+    color: #1a237e;
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+}
+
+.highlight p {
+    margin-bottom: 0;
+    font-size: 1.05rem;
+}
+
+/* 新增：按钮样式 */
+.btn-primary {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #333;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-radius: 2rem;
+}
+
+.btn-primary:hover {
+    background-color: #8ab929;
+    border-color: #8ab929;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* 新增：分隔线样式 */
+.divider {
+    height: 2px;
+    background: linear-gradient(to right, #ffc107, #8ab929);
+    margin: 3rem auto;
+    max-width: 150px;
 }
