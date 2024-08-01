@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="./static/css/services.css">
 </head>
 <body>
+    <button id="backToTop" title="回到顶部"><i class="fas fa-arrow-up"></i></button>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-2">
         <div class="container" style="padding: 6px;">
             <a class="navbar-brand" href="index.html">
@@ -211,7 +213,7 @@
                         </ul>
                     </div>
                     <div class="col-md-6">
-                        <div class="service-image-container">
+                        <div class="service-ima                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ge-container">
                             <img src="./static/img/主动式停车导航系统.png" alt="主动式停车导航系统" class="img-fluid rounded">
                         </div>
                     </div>
@@ -266,8 +268,83 @@
                             </div>
                             <h4>增值商业平台</h4>
                             <p>整合周边商业资源，为停车用户提供多样化的增值服务，如洗车、保养、购物优惠等。通过数据分析，为商家提供精准营销机会。</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#serviceModal">
+                                了解更多
+                            </button>
                         </div>
                     </div>
+
+
+                    
+
+                    <div class="modal fade" id="serviceModal" tabindex="-1" aria-labelledby="serviceModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="serviceModalLabel">增值商业平台详情</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <section class="featured-service fade-in">
+                                <div class="featured-service-content">
+                                  <h2>智能洗车服务</h2>
+                                  <p>我们的智能洗车服务采用最新科技，为您的爱车提供高效、环保的清洁体验。从快速洗车到精细护理，我们都能满足您的需求。使用我们的服务，您可以在停车的同时，让爱车焕然一新。</p>
+                                  <p>特色：</p>
+                                  <ul>
+                                    <li>智能感应，精准清洗</li>
+                                    <li>环保材料，呵护车漆</li>
+                                    <li>多种套餐，满足不同需求</li>
+                                    <li>快速高效，节省您的时间</li>
+                                  </ul>
+                                </div>
+                                <div class="featured-service-images">
+                                  <img src="./static/img/洗车产品规格图.jpg" alt="洗车产品规格" class="img-fluid">
+                                  <img src="./static/img/洗车推广图.jpg" alt="洗车推广" class="img-fluid">
+                                  <img src="./static/img/箱式智能洗车机图.jpg" alt="箱式智能洗车机" class="img-fluid">
+                                </div>
+                              </section>
+                              <section class="other-services fade-in">
+                                <h3>其他增值服务</h3>
+                                <div class="services-grid">
+                                  <div class="service-item">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <h4>车位预定</h4>
+                                    <p>提前预订停车位，省时省力</p>
+                                  </div>
+                                  <div class="service-item">
+                                    <i class="fas fa-share-alt"></i>
+                                    <h4>共享经济</h4>
+                                    <p>共享资源，创造更多价值</p>
+                                  </div>
+                                  <div class="service-item">
+                                    <i class="fas fa-wrench"></i>
+                                    <h4>汽修保养</h4>
+                                    <p>专业的汽车维修和保养服务</p>
+                                  </div>
+                                  <div class="service-item">
+                                    <i class="fas fa-percent"></i>
+                                    <h4>停车优惠</h4>
+                                    <p>享受各种停车优惠活动</p>
+                                  </div>
+                                  <div class="service-item">
+                                    <i class="fas fa-ad"></i>
+                                    <h4>商业广告</h4>
+                                    <p>精准投放，提高广告效果</p>
+                                  </div>
+                                  <div class="service-item">
+                                    <i class="fas fa-taxi"></i>
+                                    <h4>代驾服务</h4>
+                                    <p>安全可靠的代驾服务</p>
+                                  </div>
+                                </div>
+                              </section>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+
                 </div>
             </div>
         </div>
@@ -333,8 +410,6 @@
             duration: 1000,
             once: true
         });
-
-        // 平滑滚动到服务部分
         document.querySelectorAll('.service-link').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -350,7 +425,24 @@
             } else {
                 document.querySelector('.navbar').classList.remove('scrolled');
             }
+
+            // Show or hide the back to top button
+            var backToTopButton = document.getElementById("backToTop");
+            if (window.scrollY > 300) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
         });
+
+        // Smooth scroll to top when the button is clicked
+        document.getElementById("backToTop").addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+
     </script>
 </body>
 </html>
