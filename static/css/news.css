@@ -1,4 +1,5 @@
-           @import url('static/css/style.css');
+@import url('static/css/style.css');
+
 /* 全局样式 */
 :root {
     --primary: #8ab929;
@@ -9,33 +10,35 @@
     --transition: all 0.3s ease;
 }
 
-body {
-    font-family: 'Noto Sans SC', Arial, sans-serif;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
-    line-height: 1.6;
-    color: var(--text-dark);
-    padding-top: 65px; /* 为固定导航栏添加顶部内边距 */
+html {
+    font-size: 16px;
 }
 
+body {
+    font-family: 'Noto Sans SC', Arial, sans-serif;
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-light);
+    line-height: 1.6;
+    padding-top: 4.0625rem; /* 65px / 16px = 4.0625rem */
+}
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 75rem; /* 1200px / 16px = 75rem */
     margin: 0 auto;
-    padding: 6.5px;
+    padding: 0.40625rem; /* 6.5px / 16px = 0.40625rem */
 }
 
 /* 导航栏样式 */
 .navbar {
-    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,.1);
     transition: var(--transition);
 }
 
 .navbar-brand img {
-    max-height: 35px;
+    max-height: 2.1875rem; /* 35px / 16px = 2.1875rem */
     width: auto;
 }
 
@@ -49,30 +52,24 @@ body {
 .nav-link:hover, .nav-link:focus {
     color: var(--primary) !important;
 }
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 6px;
-}
 
 /* 按钮样式 */
 .btn-primary {
     background-color: var(--primary);
     border-color: var(--primary);
     color: var(--text-light);
-    padding: 10px 30px;
+    padding: 0.625rem 1.875rem; /* 10px 30px / 16px */
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.0625rem; /* 1px / 16px */
     transition: var(--transition);
 }
 
 .btn-primary:hover {
     background-color: var(--secondary);
     border-color: var(--secondary);
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: translateY(-0.1875rem); /* -3px / 16px */
+    box-shadow: 0 0.3125rem 0.9375rem rgba(0,0,0,0.1); /* 5px 15px / 16px */
 }
 
 /* 新闻中心特定样式 */
@@ -88,16 +85,16 @@ body {
     flex-direction: column;
     transition: var(--transition);
     border: none;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 0.25rem 0.375rem rgba(0,0,0,0.1);
 }
 
 .policy-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transform: translateY(-0.625rem); /* -10px / 16px */
+    box-shadow: 0 0.625rem 1.25rem rgba(0,0,0,0.2);
 }
 
 .policy-image {
-    height: 300px;
+    height: 18.75rem; /* 300px / 16px */
     object-fit: cover;
     width: 100%;
 }
@@ -123,57 +120,79 @@ body {
     font-size: 0.9rem;
 }
 
-/* 响应式调整 */
-@media (max-width: 768px) {
-    .policy-image {
-        height: 200px;
-    }
-}
-
 /* 底部样式 */
 footer {
     background-color: #333;
     color: #fff;
-    padding: 30px 0;
+    padding: 1.875rem 0; /* 30px / 16px */
 }
 
 footer a {
-    color: #edaf34;
+    color: var(--secondary);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: #8ab929;
+    color: var(--primary);
 }
-
 
 /* 社交链接样式 */
 .social-links {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 1.25rem; /* 20px / 16px */
     font-size: 0.9rem;
 }
 
 .social-icon {
-    width: 30px;
-    height: 30px;
+    width: 1.875rem; /* 30px / 16px */
+    height: 1.875rem;
     object-fit: cover;
-    margin: 0 10px;
+    margin: 0 0.625rem; /* 10px / 16px */
 }
 
 .divider {
-    width: 1px;
-    height: 30px;
+    width: 0.0625rem; /* 1px / 16px */
+    height: 1.875rem; /* 30px / 16px */
     background-color: var(--text-light);
 }
 
-@media (max-width: 768px) {
+/* 响应式调整 */
+@media (max-width: 48rem) { /* 768px / 16px */
+    html {
+        font-size: 14px;
+    }
+
+    .policy-image {
+        height: 14.2857rem; /* 200px / 14px */
+    }
+
     .social-icon {
-        width: 20px;
-        height: 20px;
+        width: 1.4285rem; /* 20px / 14px */
+        height: 1.4285rem;
     }
 }
 
+@media (max-width: 30rem) { /* 480px / 16px */
+    html {
+        font-size: 12px;
+    }
+}
+
+/* 使用vw和vh单位 */
+.hero-section {
+    height: 80vh;
+    min-height: 25rem; /* 为小屏幕设置最小高度 */
+}
+
+.full-width-image {
+    width: 100vw;
+    max-height: 50vh;
+    object-fit: cover;
+}
+
+.section-padding {
+    padding: 5vh 5vw;
+}

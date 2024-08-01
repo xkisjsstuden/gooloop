@@ -1,12 +1,16 @@
 @import url('./static/css/style.css');
 
+:root {
+    font-size: 16px;
+}
+
 body {
     font-family: 'Noto Sans SC', Arial, sans-serif;
     color: #333;
     margin: 0;
     padding: 0;
     background-color: #f8f9fa;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.6;
 }
 
@@ -143,8 +147,8 @@ a:hover {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 50px;
-    height: 3px;
+    width: 3.125rem;
+    height: 0.1875rem;
     background-color: #ffc107;
 }
 
@@ -153,7 +157,7 @@ a:hover {
     line-height: 1.8;
     color: #555;
     margin-bottom: 1.5rem;
-    max-width: 800px;
+    max-width: 50rem;
     margin-left: auto;
     margin-right: auto;
 }
@@ -161,7 +165,7 @@ a:hover {
 .service-detail ul {
     padding-left: 2rem;
     margin-bottom: 2rem;
-    max-width: 800px;
+    max-width: 50rem;
     margin-left: auto;
     margin-right: auto;
 }
@@ -185,7 +189,7 @@ a:hover {
 
 .service-image-container {
     width: 100%;
-    max-width: 800px;
+    max-width: 50rem;
     height: 0;
     padding-bottom: 56.25%; /* 16:9 宽高比 */
     position: relative;
@@ -208,6 +212,8 @@ a:hover {
 .service-image-container:hover img {
     transform: scale(1.05);
 }
+
+
 
 /* 子服务卡片样式 */
 .sub-service-card {
@@ -287,7 +293,11 @@ footer li {
 }
 
 /* 响应式设计 */
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
+    :root {
+        font-size: 14px;
+    }
+
     .display-4 {
         font-size: 2rem;
     }
@@ -323,7 +333,11 @@ footer li {
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 36rem) {
+    :root {
+        font-size: 12px;
+    }
+
     .container {
         max-width: 100%;
     }
@@ -361,10 +375,10 @@ footer li {
 .highlight {
     background-color: #fff3cd;
     padding: 1.5rem;
-    border-left: 4px solid #ffc107;
+    border-left: 0.25rem solid #ffc107;
     margin-bottom: 2rem;
     border-radius: 0 0.5rem 0.5rem 0;
-    max-width: 800px;
+    max-width: 50rem;
     margin-left: auto;
     margin-right: auto;
 }
@@ -395,222 +409,233 @@ footer li {
     background-color: #8ab929;
     border-color: #8ab929;
     color: #fff;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transform: translateY(-0.1875rem);
+    box-shadow: 0 0.25rem 0.375rem rgba(0,0,0,0.1);
 }
 
 /* 新增：分隔线样式 */
 .divider {
-    height: 2px;
+    height: 0.125rem;
     background: linear-gradient(to right, #ffc107, #8ab929);
     margin: 3rem auto;
-    max-width: 150px;
+    max-width: 9.375rem;
 }
 
 /* 弹窗样式 */
-
-#serviceModal {
-  .modal-dialog {
+#serviceModal .modal-dialog {
     max-width: 90vw;
     margin: 1.75rem auto;
-  }
-  
-  .modal-content {
+}
+
+#serviceModal .modal-content {
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
-  }
-  
-  .modal-header {
+}
+
+#serviceModal .modal-header {
     background-color: #3498db;
     color: white;
     padding: 1.5rem 2rem;
-  }
-  
-  .modal-title {
+}
+
+#serviceModal .modal-title {
     font-size: 2rem;
     font-weight: bold;
-  }
-  
-  .modal-body {
+}
+
+#serviceModal .modal-body {
     display: flex;
     flex-direction: column;
     padding: 0;
-  }
-  
-  .featured-service {
+}
+
+#serviceModal .featured-service {
     background-color: #f8f9fa;
     padding: 2rem;
     display: flex;
     align-items: center;
-  }
-  
-  .featured-service-content {
+}
+
+#serviceModal .featured-service-content {
     flex: 1;
     padding-right: 2rem;
-  }
-  
-  .featured-service h2 {
+}
+
+#serviceModal .featured-service h2 {
     color: #3498db;
     font-size: 2rem;
     margin-bottom: 1rem;
-  }
-  
-  .featured-service p {
+}
+
+#serviceModal .featured-service p {
     font-size: 1.1rem;
     color: #555;
     margin-bottom: 1.5rem;
-  }
-  
-  .featured-service-images {
+}
+
+#serviceModal .featured-service-images {
     flex: 1;
     display: flex;
     gap: 1rem;
-  }
-  
-  .featured-service-images img {
+}
+
+#serviceModal .featured-service-images img {
     width: 33%;
     border-radius: 0.5rem;
     transition: transform 0.3s ease;
-  }
-  
-  .featured-service-images img:hover {
+}
+
+#serviceModal .featured-service-images img:hover {
     transform: scale(1.05);
-  }
-  
-  .other-services {
+}
+
+#serviceModal .other-services {
     padding: 2rem;
     background-color: white;
-  }
-  
-  .other-services h3 {
+}
+
+#serviceModal .other-services h3 {
     color: #3498db;
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
-  }
-  
-  .services-grid {
+}
+
+#serviceModal .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
     gap: 1.5rem;
-  }
-  
-  .service-item {
+}
+
+#serviceModal .service-item {
     background-color: #f8f9fa;
     border-radius: 0.5rem;
     padding: 1.5rem;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .service-item:hover {
-    transform: translateY(-5px);
+}
+
+#serviceModal .service-item:hover {
+    transform: translateY(-0.3125rem);
     box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.1);
-  }
-  
-  .service-item i {
+}
+
+#serviceModal .service-item i {
     font-size: 2rem;
     color: #3498db;
     margin-bottom: 1rem;
-  }
-  
-  .service-item h4 {
+}
+
+#serviceModal .service-item h4 {
     font-size: 1.1rem;
     color: #333;
     margin-bottom: 0.5rem;
-  }
-  
-  .service-item p {
+}
+
+#serviceModal .service-item p {
     font-size: 0.9rem;
     color: #666;
+}
+
+@media (max-width: 62rem) {
+  #serviceModal .featured-service {
+      flex-direction: column;
   }
   
-  @media (max-width: 992px) {
-    .featured-service {
-      flex-direction: column;
-    }
-    
-    .featured-service-content {
+  #serviceModal .featured-service-content {
       padding-right: 0;
       padding-bottom: 2rem;
-    }
-    
-    .featured-service-images {
+  }
+  
+  #serviceModal .featured-service-images {
       width: 100%;
-    }
-    
-    .services-grid {
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
   }
   
-  @media (max-width: 768px) {
-    .modal-dialog {
-      max-width: 95vw;
-    }
-    
-    .modal-title {
-      font-size: 1.5rem;
-    }
-    
-    .featured-service h2 {
-      font-size: 1.5rem;
-    }
-    
-    .featured-service p {
-      font-size: 1rem;
-    }
-    
-    .other-services h3 {
-      font-size: 1.3rem;
-    }
-    
-    .featured-service-images {
-      flex-direction: column;
-    }
-    
-    .featured-service-images img {
-      width: 100%;
-      margin-bottom: 1rem;
-    }
-  }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  
-  .fade-in {
-    animation: fadeIn 0.5s ease-out;
+  #serviceModal .services-grid {
+      grid-template-columns: repeat(auto-fit, minmax(9.375rem, 1fr));
   }
 }
 
+@media (max-width: 48rem) {
+  #serviceModal .modal-dialog {
+      max-width: 95vw;
+  }
+  
+  #serviceModal .modal-title {
+      font-size: 1.5rem;
+  }
+  
+  #serviceModal .featured-service h2 {
+      font-size: 1.5rem;
+  }
+  
+  #serviceModal .featured-service p {
+      font-size: 1rem;
+  }
+  
+  #serviceModal .other-services h3 {
+      font-size: 1.3rem;
+  }
+  
+  #serviceModal .featured-service-images {
+      flex-direction: column;
+  }
+  
+  #serviceModal .featured-service-images img {
+      width: 100%;
+      margin-bottom: 1rem;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
 
 /* 回到顶部 */
 #backToTop {
   display: none;
   position: fixed;
-  bottom: 50px;
-  right: 50px;
+  bottom: 3.125rem;
+  right: 3.125rem;
   z-index: 99;
   border: none;
   outline: none;
   background-color: #007bff;
   color: white;
   cursor: pointer;
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
   border-radius: 50%;
-  font-size: 20px;
+  font-size: 1.25rem;
   transition: background-color 0.3s, transform 0.3s;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0.125rem 0.625rem rgba(0,0,0,0.1);
 }
 
 #backToTop:hover {
   background-color: #0056b3;
-  transform: translateY(-3px);
+  transform: translateY(-0.1875rem);
 }
 
 #backToTop .fas {
-  line-height: 50px;
+  line-height: 3.125rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 48rem) {
+  #backToTop {
+      bottom: 1.875rem;
+      right: 1.875rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      font-size: 1rem;
+  }
+
+  #backToTop .fas {
+      line-height: 2.5rem;
+  }
 }
