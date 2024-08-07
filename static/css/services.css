@@ -178,14 +178,14 @@ a:hover {
     position: relative;
 }
 
-.service-detail li::before {
+/* .service-detail li::before {
     content: '•';
     color: #ffc107;
     font-weight: bold;
     display: inline-block;
     width: 1em;
     margin-left: -1em;
-}
+} */
 
 .service-image-container {
     width: 100%;
@@ -639,3 +639,263 @@ footer li {
       line-height: 2.5rem;
   }
 }
+
+
+/* 弹窗样式 - 适配三端 */
+#videoGeomagneticModal .modal-dialog {
+    max-width: 90vw;
+    margin: 1.75rem auto;
+  }
+  
+  #videoGeomagneticModal .modal-content {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+  
+  #videoGeomagneticModal .modal-header {
+    background-color: #8ab929; /* 使用 logo 颜色 */
+    color: white;
+    padding: 1.5rem 2rem;
+  }
+  
+  #videoGeomagneticModal .modal-title {
+    font-size: 1.5rem; /* 调整字体大小 */
+    font-weight: bold;
+  }
+  
+  #videoGeomagneticModal .modal-body {
+    padding: 2rem;
+  }
+  
+  /* 标题样式 */
+  #videoGeomagneticModal .modal-body h5 {
+    color: green;
+    font-size: 1.2rem;  /* 减小字体大小 */
+    margin-bottom: 1rem; /* 增加下边距 */
+    display: inline-block; /* 修改 display 属性 */
+
+    letter-spacing: 5px;
+    /* 字间距 */
+
+
+  }
+  
+  /* 列表样式 */
+  #videoGeomagneticModal .modal-body ul {
+    list-style: disc; /* 使用实心圆点 */
+    padding-left: 2rem;
+  }
+  
+  #videoGeomagneticModal .modal-body ol {
+    list-style: decimal; /* 使用数字 */
+    padding-left: 2rem;
+  }
+  
+  /* 表格样式 */
+  #videoGeomagneticModal .modal-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+  }
+  
+  #videoGeomagneticModal .modal-body th,
+  #videoGeomagneticModal .modal-body td {
+    border: 1px solid #dee2e6;
+    padding: 0.75rem;
+    text-align: left;
+  }
+  
+  #videoGeomagneticModal .modal-body th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+  }
+  
+  /* 媒体查询 - 适配不同屏幕尺寸 */
+  @media (max-width: 768px) { 
+    #videoGeomagneticModal .modal-title {
+      font-size: 1.2rem; /* 缩小标题字体 */
+    }
+  
+    #videoGeomagneticModal .modal-body {
+      padding: 1.5rem; /* 减少内边距 */
+    }
+  
+    #videoGeomagneticModal .modal-body h5 {
+      margin-bottom: 1rem;
+    }
+  }
+  
+  @media (max-width: 576px) { 
+    #videoGeomagneticModal .modal-dialog {
+      max-width: 95vw; /* 调整弹窗宽度 */
+    }
+  
+    #videoGeomagneticModal .modal-title {
+      font-size: 1rem; /* 进一步缩小标题字体 */
+    }
+  
+    #videoGeomagneticModal .modal-body {
+      padding: 1rem;
+    }
+  }
+
+
+
+/* Modal styles */
+/* 重置和基础样式 */
+#videoGeomagneticModal * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #videoGeomagneticModal {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  /* 模态框样式 */
+  #videoGeomagneticModal .modal-content {
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  }
+  
+  #videoGeomagneticModal .modal-header {
+    background-color: #8ab929;
+    color: white;
+    border-bottom: none;
+    padding: 1.5rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+  
+  #videoGeomagneticModal .modal-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  #videoGeomagneticModal .modal-body {
+    padding: 2rem;
+  }
+  
+  /* 标题样式 */
+  #videoGeomagneticModal h5 {
+    color: #8ab929;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #8ab929;
+  }
+  
+  /* 内容布局 */
+  #videoGeomagneticModal .row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  #videoGeomagneticModal .col-md-6 {
+    padding: 0 1rem;
+  }
+  
+  /* 图片样式 */
+  #videoGeomagneticModal .img-fluid {
+    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 文本样式 */
+  #videoGeomagneticModal p {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* 列表样式 */
+  #videoGeomagneticModal ul, 
+  #videoGeomagneticModal ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  #videoGeomagneticModal li {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* 表格样式 */
+  #videoGeomagneticModal .table {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+  
+  #videoGeomagneticModal .table th,
+  #videoGeomagneticModal .table td {
+    padding: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  #videoGeomagneticModal .table thead th {
+    background-color: #8ab929;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  #videoGeomagneticModal .table tbody tr:last-child td {
+    border-bottom: none;
+  }
+  
+  /* 按钮样式 */
+  #videoGeomagneticModal .btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  #videoGeomagneticModal .btn-secondary {
+    background-color: #8ab929;
+    border-color: #8ab929;
+    color: white;
+  }
+  
+  #videoGeomagneticModal .btn-secondary:hover {
+    background-color: #729c22;
+    border-color: #729c22;
+  }
+  
+  /* 响应式调整 */
+  @media (max-width: 768px) {
+    #videoGeomagneticModal .row {
+      flex-direction: column;
+    }
+  
+    #videoGeomagneticModal .col-md-6 {
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+  
+    #videoGeomagneticModal .modal-body {
+      padding: 1.5rem;
+    }
+  
+    #videoGeomagneticModal h5 {
+      font-size: 1.2rem;
+    }
+  
+    #videoGeomagneticModal .table {
+      font-size: 0.9rem;
+    }
+  
+    #videoGeomagneticModal .btn {
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+  }

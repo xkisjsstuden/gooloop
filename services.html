@@ -246,6 +246,9 @@
                             <p>采用先进的车牌识别技术，实现车辆快速进出。系统支持多种支付方式，包括移动支付、ETC等，提高通行效率，减少拥堵。</p>
                         </div>
                     </div>
+
+
+
                     <div class="col-md-4">
                         <div class="sub-service-card">
                             <div class="icon-wrapper">
@@ -253,8 +256,15 @@
                             </div>
                             <h4>路边停车</h4>
                             <p>通过智能感应设备和移动应用，实现路边停车位的实时监控和管理。支持在线预订、自动计费，有效提高路边停车位的周转率。</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#videoGeomagneticModal">
+                                了解更多
+                              </button>
                         </div>
                     </div>
+
+
+
+
                     <div class="col-md-4">
                         <div class="sub-service-card">
                             <div class="icon-wrapper">
@@ -345,6 +355,154 @@
                           </div>
                         </div>
                       </div>
+
+
+                      <div class="modal fade" id="videoGeomagneticModal" tabindex="-1" aria-labelledby="videoGeomagneticModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="videoGeomagneticModalLabel" style="color: white;">路边停车方案详情</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                      
+                              <div class="row">
+                                <div class="col-md-2">
+                                  <h5 class="text-success">视频+地磁方案特点</h5>
+                                </div>
+                                <div class="col-md-10">
+                                  <ul>
+                                    <li>
+                                      <b>视频和地磁优势互补</b><br>
+                                      既可以使用视频自动记录车辆停车录像，也可以利用地磁准确记录进出场时间
+                                    </li>
+                                    <li>
+                                      <b>可满足各种场景应用</b>
+                                      <ol>
+                                        <li>无树木遮挡直接使用高位视频</li>
+                                        <li>有树木遮挡的路段使用中位视频</li>
+                                        <li>中高位视频立柱下方如果停放车位，可用地磁做补充，解 决IT票问题。</li>
+                                      </ol>
+                                    </li>
+                                    <li>
+                                      <b>减少人工干预，实现无人值管</b>
+                                      <ol>
+                                        <li>系统能够以车库、车牌识别、证据保存、时间校准、停车 计时等自动化系统自动运行。</li>
+                                        <li>可使用视频巡检车作为补充方案， 提高工作效率</li>
+                                      </ol>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                      
+                              <h5>各产品方案优劣分析</h5>
+                      
+                              <table class="table table-bordered">
+                                <thead>
+                                  <tr>
+                                    <th>产品方案</th>
+                                    <th>优势</th>
+                                    <th>劣势</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>中高位视频</td>
+                                    <td>
+                                      <ul>
+                                        <li>自动抓取车牌</li>
+                                        <li>录像证据</li>
+                                        <li>无需人工干预</li>
+                                      </ul>
+                                    </td>
+                                    <td>
+                                      <ul>
+                                        <li>如果人为遮挡无法抓拍，需手动 校验或补时间</li>
+                                        <li>易受天气环境影响</li>
+                                      </ul>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>视频桩</td>
+                                    <td>
+                                      <ul>
+                                        <li>自动抓取车牌</li>
+                                        <li>录像证据</li>
+                                        <li>无需人工干预</li>
+                                      </ul>
+                                    </td>
+                                    <td>
+                                      <ul>
+                                        <li>容易被行人车辆等遮挡损坏</li>
+                                        <li>占用路侧空间，不宜大量部 署</li>
+                                      </ul>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>NB-IOT地磁</td>
+                                    <td>
+                                      <ul>
+                                        <li>抗干扰能力强</li>
+                                        <li>精准记录车位使用时间</li>
+                                      </ul>
+                                    </td>
+                                    <td>
+                                      <ul>
+                                        <li>无法自动记录车辆</li>
+                                        <li>需人工对现场的车牌进行 拍照记录</li>
+                                      </ul>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                      <!-- 高位枪球 -->
+                              <div class="row mt-4"> 
+                                <div class="col-md-6">
+                                  <img src="./static/img/high-position-image.png" class="img-fluid" alt="高位枪球安装场景">
+                                </div>
+                                <div class="col-md-6">
+                                  <h5>高位枪球安装场景</h5>
+                                  <p>一套枪球设备监测范围是8个停车位，使用1个200万枪机和1个200万球机</p>
+                                  <p>枪机检测车辆驶入和驶出，球机抓拍车号</p>
+                                </div>
+                              </div>
+                              <!-- 中位枪球 -->
+                              <div class="row mt-4"> 
+                                <div class="col-md-6">
+                                  <img src="./static/img/中位.png" class="img-fluid" alt="中位">
+                                </div>
+                                <div class="col-md-6">
+                                  <h5>中位双枪安装场景</h5>
+                                  <p>一套双枪设备监测范围是8个停车位，使用两台600万像素枪机做检测</p>
+                                  <p>近端枪检测4个车位，远端枪检测4个车位</p>
+                                </div>
+                              </div>
+                              <!--  -->
+                              <div class="row mt-4"> 
+                                <div class="col-md-6">
+                                  <img src="./static/img/低位扫描.png" class="img-fluid" alt="低位扫描">
+                                </div>
+                                <div class="col-md-6">
+                                  <h5>低位视频-视频桩</h5>
+                                  <p>采用600万摄像机、补光灯、指示灯一体化设计·</p>
+                                  <p>自动采集停车信息，将停车图片、停车时间等信息</p>
+                                  <p>设备安放在泊位右后侧，不影响路面车辆正常通行</p>
+                                </div>
+                              </div>
+
+
+
+
+
+                      
+                            </div>
+                            <!-- <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+                            </div> -->
+                          </div>
+                        </div>
+                      </div>
+
 
 
 

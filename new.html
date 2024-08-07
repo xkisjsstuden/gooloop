@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品方案分析</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .tab-pane {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4">各产品方案优劣分析</h2>
+        
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="comparison-tab" data-bs-toggle="tab" data-bs-target="#comparison" type="button" role="tab" aria-controls="comparison" aria-selected="true">方案对比</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="combined-tab" data-bs-toggle="tab" data-bs-target="#combined" type="button" role="tab" aria-controls="combined" aria-selected="false">视频+地磁方案</button>
+            </li>
+        </ul>
+        
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="comparison" role="tabpanel" aria-labelledby="comparison-tab">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>产品方案</th>
+                                <th>优势</th>
+                                <th>劣势</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>中高位视频</td>
+                                <td>
+                                    <ul>
+                                        <li>自动抓取车牌</li>
+                                        <li>录像证据</li>
+                                        <li>无需人工干预</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>如果入场遮挡无法抓拍，需手动校验入场时间</li>
+                                        <li>易受天气环境影响</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>视频桩</td>
+                                <td>
+                                    <ul>
+                                        <li>自动抓取车牌</li>
+                                        <li>录像证据</li>
+                                        <li>无需人工干预</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>容易被行人车辆等遮挡破坏</li>
+                                        <li>占用道路空间，不宜大面积部署</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>NB-IOT地磁</td>
+                                <td>
+                                    <ul>
+                                        <li>抗干扰能力强</li>
+                                        <li>精准记录车位使用时间</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>无法自动记录车牌</li>
+                                        <li>需人工干预对超时车辆进行拍照记录</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="combined" role="tabpanel" aria-labelledby="combined-tab">
+                <h3 class="mb-3">视频+地磁方案特点</h3>
+                <ul class="list-group list-group-flush mb-3">
+                    <li class="list-group-item">
+                        <strong>视频和地磁优势互补：</strong> 既可以利用视频自动记录车牌和停车录像，也可以利用地磁准确记录进出场时间
+                    </li>
+                    <li class="list-group-item">
+                        <strong>可满足各种场景应用：</strong>
+                        <ul>
+                            <li>无树木遮挡道路使用高位视频</li>
+                            <li>有树木遮挡的道路使用中位视频</li>
+                            <li>中高位视频立柱下方如果设停车位，可用视频柱做补充，解决灯下黑问题</li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>减少人工干预，实现无人化运营：</strong>
+                        <ul>
+                            <li>系统智能化程度高，车牌识别、证据保存、时间校准、停车计费等均可在系统自动进行</li>
+                            <li>可使用视频巡查车作为机动补充，提高工作效率</li>
+                        </ul>
+                    </li>
+                </ul>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detailModal">
+                    查看详情
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="detailModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="detailModalLabel">视频+地磁方案详情</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+
+
+
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>方案特点</h4>
+                            <ul>
+                                <li><strong>视频和地磁优势互补</strong></li>
+                                <li><strong>可满足各种场景应用</strong></li>
+                                <li><strong>减少人工干预，实现无人化运营</strong></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h4>产品优势</h4>
+                            <ul>
+                                <li><strong>自动化程度高：</strong>自动抓取车牌，录像取证，无需人工干预</li>
+                                <li><strong>适应性强：</strong>可满足不同场景需求，如有无树木遮挡等</li>
+                                <li><strong>数据精确：</strong>地磁技术能精准记录车位使用时间</li>
+                                <li><strong>运营效率高：</strong>实现无人化运营，大幅减少人工成本</li>
+                                <li><strong>证据完整：</strong>结合视频和地磁数据，提供全面可靠的停车记录</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
